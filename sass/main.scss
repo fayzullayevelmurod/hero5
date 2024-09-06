@@ -86,6 +86,13 @@ body {
   margin: 0 auto;
 }
 
+.title {
+  font-family: "Unbounded", "Manrope", sans-serif;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 56px;
+}
+
 // header start
 .header {
   position: absolute;
@@ -93,6 +100,7 @@ body {
   left: 0;
   width: 100%;
   z-index: 999;
+
   .container {
     display: flex;
     align-items: center;
@@ -101,10 +109,12 @@ body {
     background: #fff;
     padding: 9px 16px;
   }
+
   .nav-list {
     display: flex;
     gap: 8px;
   }
+
   .nav-link {
     font-size: 14px;
     font-weight: 500;
@@ -120,6 +130,7 @@ body {
       background: #e2e2e2;
     }
   }
+
   &-right {
     display: flex;
     gap: 20px;
@@ -134,18 +145,19 @@ body {
       display: flex;
       align-items: center;
       gap: 6px;
+
       &.sale-btn {
-        background: linear-gradient(
-          277.24deg,
-          #ffab22 -11.68%,
-          #ff5313 140.19%
-        );
+        background: linear-gradient(277.24deg,
+            #ffab22 -11.68%,
+            #ff5313 140.19%);
       }
+
       &.orange-btn {
         background: #ff5313;
       }
     }
   }
+
   &-social__media {
     display: flex;
     gap: 4px;
@@ -161,6 +173,7 @@ body {
     }
   }
 }
+
 // header end
 
 // intro start
@@ -171,6 +184,7 @@ body {
 
   &-content {
     text-align: center;
+
     &__title {
       font-family: "Unbounded", "Manrope", sans-serif;
       font-size: 48px;
@@ -180,4 +194,156 @@ body {
     }
   }
 }
+
 // intro end
+
+// about us start
+.about-us {
+  padding: 120px 0;
+
+  &-content {
+    text-align: center;
+  }
+
+  &__title {
+    font-family: "Unbounded", "Manrope", sans-serif;
+    font-size: 64px;
+    font-weight: 500;
+    line-height: 72px;
+    text-align: center;
+    margin-bottom: 4px;
+    background: linear-gradient(90deg, #FF5313, #FF8C00, #FF5313);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    animation: gradientFlow 5s linear infinite;
+
+    @keyframes gradientFlow {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      100% {
+        background-position: 200% 50%;
+      }
+    }
+  }
+
+  &-cards {
+    display: grid;
+    grid-template-columns: 350px 1fr 350px;
+    gap: 12px;
+    margin-top: 40px;
+  }
+
+  &-card__duble {
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &-card {
+    &__img {
+      position: absolute;
+    }
+  }
+
+  &__card {
+    padding: 24px;
+    border-radius: 24px;
+    background: #F5F5F5;
+    position: relative;
+    height: 100%;
+
+    &__title {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 28px;
+    }
+
+    &.comment {
+      .about-us-card__img {
+        bottom: 12px;
+        width: 189px;
+        height: 206px;
+        right: 22px;
+      }
+    }
+
+    &.plus {
+      background: #FFF1DA;
+
+      .plus-img__one {
+        top: 50px;
+        right: 11px;
+        width: 84px;
+        height: 84px;
+      }
+
+      .plus-img__two {
+        width: 118px;
+        height: 118px;
+        bottom: 0;
+        top: unset;
+        right: 75px;
+      }
+
+      .plus-img__three {
+        width: 65px;
+        height: 65px;
+        bottom: 35px;
+        left: 81px;
+      }
+    }
+
+    &.up-money {
+      background: #FFE4DA;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .about-us-card__img {
+        position: initial;
+        width: 100%;
+        height: 382px;
+        object-fit: contain;
+      }
+    }
+
+    &.partnership {
+      .about-us-card__img {
+        bottom: 14px;
+        right: 22px;
+        width: 159px;
+        height: 178px;
+      }
+    }
+
+    &.star {
+      .about-us-card__img {
+        bottom: 11px;
+        right: 11px;
+        width: 176px;
+        height: 187px;
+      }
+    }
+  }
+  .about-us-card__img {
+    animation: floatAnimation 3s ease-in-out infinite;
+  }
+
+  @keyframes floatAnimation {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+}
+
+// about us end

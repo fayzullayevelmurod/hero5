@@ -223,4 +223,3 @@ const elements = ["Инвесторы", "Клиенты", "Идеи", "Парт�
 elements.forEach((text, index) => {
     setTimeout(() => createFallingElement(text), index * 1000);  // Har bir elementni 1 soniyadan keyin tushirish
 });
-
