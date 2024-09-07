@@ -21,7 +21,7 @@
 
     <div class="wrapper">
       <!-- header -->
-      <header class="header" data-aos="fade-down" data-aos-duration="1000">
+      <header class="header">
         <div class="container">
           <nav>
             <ul class="nav-list">
@@ -67,7 +67,7 @@
       <main>
 
         <!-- intro -->
-        <section class="intro" data-aos="fade-up" data-aos-duration="1000">
+        <section class="intro">
           <div class="intro-content">
             <img src="images/logo.svg" alt="logo" data-aos="zoom-in" data-aos-delay="300">
             <h1 class="intro-content__title" data-aos="zoom-in-up" data-aos-delay="300">Связи на миллион</h1>
@@ -87,29 +87,29 @@
 
             <div class="about-us-cards">
               <div class="about-us-card__duble">
-                <div class="about-us__card comment" data-tilt data-aos="fade-right" data-aos-delay="100">
+                <div class="about-us__card animation-img__card comment" data-aos="fade-right" data-aos-delay="100">
                   <h3 class="about-us-card__title">Рассказывайте <br> о своем бизнесе</h3>
-                  <img class="about-us-card__img" src="images/msg.svg" alt="msg">
+                  <img class="about-us-card__img animation-img aos-init aos-animate" src="images/msg.svg" alt="msg">
                 </div>
-                <div class="about-us__card  plus" data-tilt data-aos="fade-right" data-aos-delay="200">
+                <div class="about-us__card animation-img__card  plus" data-aos="fade-right" data-aos-delay="200">
                   <h3 class="about-us-card__title">Находите новых <br> клиентов, партнеров <br> и инвесторов</h3>
-                  <img class="about-us-card__img plus-img__one" src="images/plus.svg" alt="msg">
-                  <img class="about-us-card__img plus-img__two" src="images/plus.svg" alt="msg">
-                  <img class="about-us-card__img plus-img__three" src="images/plus.svg" alt="msg">
+                  <img class="about-us-card__img animation-img plus-img__one" src="images/plus.svg" alt="msg">
+                  <img class="about-us-card__img animation-img plus-img__two" src="images/plus.svg" alt="msg">
+                  <img class="about-us-card__img animation-img plus-img__three" src="images/plus.svg" alt="msg">
                 </div>
               </div>
-              <div class="about-us__card  up-money" data-tilt data-aos="fade-up" data-aos-delay="500">
+              <div class="about-us__card animation-img__card up-money" data-aos="fade-up" data-aos-delay="500">
                 <h3 class="about-us-card__title">Узнавайте от других о новых <br> бизнес-направлениях</h3>
-                <img class="about-us-card__img" src="images/up-money.png" alt="up-money">
+                <img class="about-us-card__img animation-img" src="images/up-money.png" alt="up-money">
               </div>
               <div class="about-us-card__duble">
-                <div class="about-us__card partnership" data-tilt data-aos="fade-left" data-aos-delay="600">
+                <div class="about-us__card animation-img__card partnership" data-aos="fade-left" data-aos-delay="600">
                   <h3 class="about-us-card__title">Заключайте новые <br> партнерства</h3>
-                  <img class="about-us-card__img" src="images/user.svg" alt="user">
+                  <img class="about-us-card__img animation-img" src="images/user.svg" alt="user">
                 </div>
-                <div class="about-us__card star" data-tilt data-aos="fade-left" data-aos-delay="700">
+                <div class="about-us__card star animation-img__card" data-aos="fade-left" data-aos-delay="700">
                   <h3 class="about-us-card__title">Получайте ценные <br> рекомендации от <br> опытных экспертов</h3>
-                  <img class="about-us-card__img" src="images/star.svg" alt="star">
+                  <img class="about-us-card__img animation-img" src="images/star.svg" alt="star">
                 </div>
               </div>
             </div>
@@ -177,101 +177,511 @@
                 </div>
               </div>
 
-              <div class="financial-status__slider swiper-container" data-aos="fade-up" data-aos-duration="2000">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="financial-status__step-card gold-card">
-                      <div class="financial-status__step-card__header">
-                        <span class="financial-status__step-card__step">Шаг 1</span>
-                        <div class="financial-status__step-card__icon">
-                          <img src="images/icons/user-alt.svg" alt="user-alt">
+              <div class="tab-content">
+                <div class="financial-status__slider swiper-container" data-aos="fade-up" data-aos-duration="2000">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide" data-aos="zoom-in" data-aos-delay="200">
+                      <div class="financial-status__step-card gold-card">
+                        <div class="financial-status__step-card__header">
+                          <span class="financial-status__step-card__step">Шаг 1</span>
+                          <div class="financial-status__step-card__icon">
+                            <img src="images/icons/user-alt.svg" alt="user-alt">
+                          </div>
+                        </div>
+                        <div class="financial-status__step-card__body">
+                          <h3 class="financial-status__step-card__title">Проходите регистрацию и оплачиваете нужный вам
+                            статус, который дает вам 100 токенов.</h3>
+                          <p class="financial-status__step-card__text">
+                            Количество токенов = количество знакомств по вашему статусу.
+                          </p>
                         </div>
                       </div>
-                      <div class="financial-status__step-card__body">
-                        <h3 class="financial-status__step-card__title">Проходите регистрацию и оплачиваете нужный вам
-                          статус, который дает вам 100 токенов.</h3>
-                        <p class="financial-status__step-card__text">
-                          Количество токенов = количество знакомств по вашему статусу.
-                        </p>
+                    </div>
+                    <div class="swiper-slide" data-aos="zoom-in" data-aos-delay="300">
+                      <div class="financial-status__step-card">
+                        <div class="financial-status__step-card__header">
+                          <span class="financial-status__step-card__step">Шаг 2</span>
+                          <div class="financial-status__step-card__icon">
+                            <img src="images/icons/settings.svg" alt="settings">
+                          </div>
+                        </div>
+                        <div class="financial-status__step-card__body">
+                          <h3 class="financial-status__step-card__title">Настраиваете параметры знакомств:</h3>
+                          <ul class="financial-status__step-card__text">
+                            <li>
+                              Живое общение в рамках своего города
+                            </li>
+                            <li>
+                              Онлайн-видео связь
+                            </li>
+                            <li>
+                              Общение в месседжерах
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide" data-aos="zoom-in" data-aos-delay="400">
+                      <div class="financial-status__step-card orange-card">
+                        <div class="financial-status__step-card__header">
+                          <span class="financial-status__step-card__step">Шаг 3</span>
+                          <div class="financial-status__step-card__icon">
+                            <img src="images/icons/bag.svg" alt="bag">
+                          </div>
+                        </div>
+                        <div class="financial-status__step-card__body">
+                          <h3 class="financial-status__step-card__title">Приложение находит людей в рамках вашего
+                            финансового статуса</h3>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide" data-aos="zoom-in" data-aos-delay="500">
+                      <div class="financial-status__step-card gold-card">
+                        <div class="financial-status__step-card__header">
+                          <span class="financial-status__step-card__step">Шаг 4</span>
+                          <div class="financial-status__step-card__icon">
+                            <img src="images/icons/like-star.svg" alt="like-star">
+                          </div>
+                        </div>
+                        <div class="financial-status__step-card__body">
+                          <h3 class="financial-status__step-card__title">Вы выбираете, с кем готовы познакомиться</h3>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide" data-aos="zoom-in" data-aos-delay="600">
+                      <div class="financial-status__step-card">
+                        <div class="financial-status__step-card__header">
+                          <span class="financial-status__step-card__step">Шаг 5</span>
+                          <div class="financial-status__step-card__icon">
+                            <img src="images/icons/notes.svg" alt="notes">
+                          </div>
+                        </div>
+                        <div class="financial-status__step-card__body">
+                          <h3 class="financial-status__step-card__title">Вам приходит анкета и контакты выбранного вами
+                            человека</h3>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide" data-aos="zoom-in" data-aos-delay="700">
+                      <div class="financial-status__step-card orange-card">
+                        <div class="financial-status__step-card__header">
+                          <span class="financial-status__step-card__step">Шаг 6</span>
+                          <div class="financial-status__step-card__icon">
+                            <img src="images/icons/fire-2.svg" alt="like-star">
+                          </div>
+                        </div>
+                        <div class="financial-status__step-card__body">
+                          <h3 class="financial-status__step-card__title">Когда происходит мэтч, с каждого списывается по
+                            одному токену</h3>
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <div class="swiper-slide" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="financial-status__step-card">
-                      <div class="financial-status__step-card__header">
-                        <span class="financial-status__step-card__step">Шаг 2</span>
-                        <div class="financial-status__step-card__icon">
-                          <img src="images/icons/settings.svg" alt="settings">
+                </div>
+              </div>
+              <div class="tab-content">
+                <div class="financial-status__slider swiper-container" data-aos="fade-up" data-aos-duration="2000">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide" data-aos="zoom-in" data-aos-delay="200">
+                      <div class="financial-status__step-card gold-card">
+                        <div class="financial-status__step-card__header">
+                          <span class="financial-status__step-card__step">Шаг 1</span>
+                          <div class="financial-status__step-card__icon">
+                            <img src="images/icons/user-alt.svg" alt="user-alt">
+                          </div>
+                        </div>
+                        <div class="financial-status__step-card__body">
+                          <h3 class="financial-status__step-card__title">Проходите регистрацию и оплачиваете нужный вам
+                            статус, который дает вам 100 токенов.</h3>
+                          <p class="financial-status__step-card__text">
+                            Количество токенов = количество знакомств по вашему статусу.
+                          </p>
                         </div>
                       </div>
-                      <div class="financial-status__step-card__body">
-                        <h3 class="financial-status__step-card__title">Настраиваете параметры знакомств:</h3>
-                        <ul class="financial-status__step-card__text">
-                          <li>
-                            Живое общение в рамках своего города
-                          </li>
-                          <li>
-                            Онлайн-видео связь
-                          </li>
-                          <li>
-                            Общение в месседжерах
-                          </li>
-                        </ul>
+                    </div>
+                    <div class="swiper-slide" data-aos="zoom-in" data-aos-delay="300">
+                      <div class="financial-status__step-card">
+                        <div class="financial-status__step-card__header">
+                          <span class="financial-status__step-card__step">Шаг 2</span>
+                          <div class="financial-status__step-card__icon">
+                            <img src="images/icons/settings.svg" alt="settings">
+                          </div>
+                        </div>
+                        <div class="financial-status__step-card__body">
+                          <h3 class="financial-status__step-card__title">Настраиваете параметры знакомств:</h3>
+                          <ul class="financial-status__step-card__text">
+                            <li>
+                              Живое общение в рамках своего города
+                            </li>
+                            <li>
+                              Онлайн-видео связь
+                            </li>
+                            <li>
+                              Общение в месседжерах
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide" data-aos="zoom-in" data-aos-delay="400">
+                      <div class="financial-status__step-card orange-card">
+                        <div class="financial-status__step-card__header">
+                          <span class="financial-status__step-card__step">Шаг 3</span>
+                          <div class="financial-status__step-card__icon">
+                            <img src="images/icons/bag.svg" alt="bag">
+                          </div>
+                        </div>
+                        <div class="financial-status__step-card__body">
+                          <h3 class="financial-status__step-card__title">Приложение находит людей в рамках вашего
+                            финансового статуса</h3>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide" data-aos="zoom-in" data-aos-delay="500">
+                      <div class="financial-status__step-card gold-card">
+                        <div class="financial-status__step-card__header">
+                          <span class="financial-status__step-card__step">Шаг 4</span>
+                          <div class="financial-status__step-card__icon">
+                            <img src="images/icons/like-star.svg" alt="like-star">
+                          </div>
+                        </div>
+                        <div class="financial-status__step-card__body">
+                          <h3 class="financial-status__step-card__title">Вы выбираете, с кем готовы познакомиться</h3>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide" data-aos="zoom-in" data-aos-delay="600">
+                      <div class="financial-status__step-card">
+                        <div class="financial-status__step-card__header">
+                          <span class="financial-status__step-card__step">Шаг 5</span>
+                          <div class="financial-status__step-card__icon">
+                            <img src="images/icons/notes.svg" alt="notes">
+                          </div>
+                        </div>
+                        <div class="financial-status__step-card__body">
+                          <h3 class="financial-status__step-card__title">Вам приходит анкета и контакты выбранного вами
+                            человека</h3>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide" data-aos="zoom-in" data-aos-delay="700">
+                      <div class="financial-status__step-card orange-card">
+                        <div class="financial-status__step-card__header">
+                          <span class="financial-status__step-card__step">Шаг 6</span>
+                          <div class="financial-status__step-card__icon">
+                            <img src="images/icons/fire-2.svg" alt="like-star">
+                          </div>
+                        </div>
+                        <div class="financial-status__step-card__body">
+                          <h3 class="financial-status__step-card__title">Когда происходит мэтч, с каждого списывается по
+                            одному токену</h3>
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <div class="swiper-slide" data-aos="zoom-in" data-aos-delay="400">
-                    <div class="financial-status__step-card orange-card">
-                      <div class="financial-status__step-card__header">
-                        <span class="financial-status__step-card__step">Шаг 3</span>
-                        <div class="financial-status__step-card__icon">
-                          <img src="images/icons/bag.svg" alt="bag">
+                </div>
+              </div>
+              <div class="tab-content">
+                <div class="financial-status__slider swiper-container" data-aos="fade-up" data-aos-duration="2000">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide" data-aos="zoom-in" data-aos-delay="200">
+                      <div class="financial-status__step-card gold-card">
+                        <div class="financial-status__step-card__header">
+                          <span class="financial-status__step-card__step">Шаг 1</span>
+                          <div class="financial-status__step-card__icon">
+                            <img src="images/icons/user-alt.svg" alt="user-alt">
+                          </div>
+                        </div>
+                        <div class="financial-status__step-card__body">
+                          <h3 class="financial-status__step-card__title">Проходите регистрацию и оплачиваете нужный вам
+                            статус, который дает вам 100 токенов.</h3>
+                          <p class="financial-status__step-card__text">
+                            Количество токенов = количество знакомств по вашему статусу.
+                          </p>
                         </div>
                       </div>
-                      <div class="financial-status__step-card__body">
-                        <h3 class="financial-status__step-card__title">Приложение находит людей в рамках вашего
-                          финансового статуса</h3>
+                    </div>
+                    <div class="swiper-slide" data-aos="zoom-in" data-aos-delay="300">
+                      <div class="financial-status__step-card">
+                        <div class="financial-status__step-card__header">
+                          <span class="financial-status__step-card__step">Шаг 2</span>
+                          <div class="financial-status__step-card__icon">
+                            <img src="images/icons/settings.svg" alt="settings">
+                          </div>
+                        </div>
+                        <div class="financial-status__step-card__body">
+                          <h3 class="financial-status__step-card__title">Настраиваете параметры знакомств:</h3>
+                          <ul class="financial-status__step-card__text">
+                            <li>
+                              Живое общение в рамках своего города
+                            </li>
+                            <li>
+                              Онлайн-видео связь
+                            </li>
+                            <li>
+                              Общение в месседжерах
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide" data-aos="zoom-in" data-aos-delay="400">
+                      <div class="financial-status__step-card orange-card">
+                        <div class="financial-status__step-card__header">
+                          <span class="financial-status__step-card__step">Шаг 3</span>
+                          <div class="financial-status__step-card__icon">
+                            <img src="images/icons/bag.svg" alt="bag">
+                          </div>
+                        </div>
+                        <div class="financial-status__step-card__body">
+                          <h3 class="financial-status__step-card__title">Приложение находит людей в рамках вашего
+                            финансового статуса</h3>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide" data-aos="zoom-in" data-aos-delay="500">
+                      <div class="financial-status__step-card gold-card">
+                        <div class="financial-status__step-card__header">
+                          <span class="financial-status__step-card__step">Шаг 4</span>
+                          <div class="financial-status__step-card__icon">
+                            <img src="images/icons/like-star.svg" alt="like-star">
+                          </div>
+                        </div>
+                        <div class="financial-status__step-card__body">
+                          <h3 class="financial-status__step-card__title">Вы выбираете, с кем готовы познакомиться</h3>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide" data-aos="zoom-in" data-aos-delay="600">
+                      <div class="financial-status__step-card">
+                        <div class="financial-status__step-card__header">
+                          <span class="financial-status__step-card__step">Шаг 5</span>
+                          <div class="financial-status__step-card__icon">
+                            <img src="images/icons/notes.svg" alt="notes">
+                          </div>
+                        </div>
+                        <div class="financial-status__step-card__body">
+                          <h3 class="financial-status__step-card__title">Вам приходит анкета и контакты выбранного вами
+                            человека</h3>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide" data-aos="zoom-in" data-aos-delay="700">
+                      <div class="financial-status__step-card orange-card">
+                        <div class="financial-status__step-card__header">
+                          <span class="financial-status__step-card__step">Шаг 6</span>
+                          <div class="financial-status__step-card__icon">
+                            <img src="images/icons/fire-2.svg" alt="like-star">
+                          </div>
+                        </div>
+                        <div class="financial-status__step-card__body">
+                          <h3 class="financial-status__step-card__title">Когда происходит мэтч, с каждого списывается по
+                            одному токену</h3>
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <div class="swiper-slide" data-aos="zoom-in" data-aos-delay="500">
-                    <div class="financial-status__step-card gold-card">
-                      <div class="financial-status__step-card__header">
-                        <span class="financial-status__step-card__step">Шаг 4</span>
-                        <div class="financial-status__step-card__icon">
-                          <img src="images/icons/like-star.svg" alt="like-star">
+                </div>
+              </div>
+              <div class="tab-content">
+                <div class="financial-status__slider swiper-container" data-aos="fade-up" data-aos-duration="2000">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide" data-aos="zoom-in" data-aos-delay="200">
+                      <div class="financial-status__step-card gold-card">
+                        <div class="financial-status__step-card__header">
+                          <span class="financial-status__step-card__step">Шаг 1</span>
+                          <div class="financial-status__step-card__icon">
+                            <img src="images/icons/user-alt.svg" alt="user-alt">
+                          </div>
+                        </div>
+                        <div class="financial-status__step-card__body">
+                          <h3 class="financial-status__step-card__title">Проходите регистрацию и оплачиваете нужный вам
+                            статус, который дает вам 100 токенов.</h3>
+                          <p class="financial-status__step-card__text">
+                            Количество токенов = количество знакомств по вашему статусу.
+                          </p>
                         </div>
                       </div>
-                      <div class="financial-status__step-card__body">
-                        <h3 class="financial-status__step-card__title">Вы выбираете, с кем готовы познакомиться</h3>
+                    </div>
+                    <div class="swiper-slide" data-aos="zoom-in" data-aos-delay="300">
+                      <div class="financial-status__step-card">
+                        <div class="financial-status__step-card__header">
+                          <span class="financial-status__step-card__step">Шаг 2</span>
+                          <div class="financial-status__step-card__icon">
+                            <img src="images/icons/settings.svg" alt="settings">
+                          </div>
+                        </div>
+                        <div class="financial-status__step-card__body">
+                          <h3 class="financial-status__step-card__title">Настраиваете параметры знакомств:</h3>
+                          <ul class="financial-status__step-card__text">
+                            <li>
+                              Живое общение в рамках своего города
+                            </li>
+                            <li>
+                              Онлайн-видео связь
+                            </li>
+                            <li>
+                              Общение в месседжерах
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide" data-aos="zoom-in" data-aos-delay="400">
+                      <div class="financial-status__step-card orange-card">
+                        <div class="financial-status__step-card__header">
+                          <span class="financial-status__step-card__step">Шаг 3</span>
+                          <div class="financial-status__step-card__icon">
+                            <img src="images/icons/bag.svg" alt="bag">
+                          </div>
+                        </div>
+                        <div class="financial-status__step-card__body">
+                          <h3 class="financial-status__step-card__title">Приложение находит людей в рамках вашего
+                            финансового статуса</h3>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide" data-aos="zoom-in" data-aos-delay="500">
+                      <div class="financial-status__step-card gold-card">
+                        <div class="financial-status__step-card__header">
+                          <span class="financial-status__step-card__step">Шаг 4</span>
+                          <div class="financial-status__step-card__icon">
+                            <img src="images/icons/like-star.svg" alt="like-star">
+                          </div>
+                        </div>
+                        <div class="financial-status__step-card__body">
+                          <h3 class="financial-status__step-card__title">Вы выбираете, с кем готовы познакомиться</h3>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide" data-aos="zoom-in" data-aos-delay="600">
+                      <div class="financial-status__step-card">
+                        <div class="financial-status__step-card__header">
+                          <span class="financial-status__step-card__step">Шаг 5</span>
+                          <div class="financial-status__step-card__icon">
+                            <img src="images/icons/notes.svg" alt="notes">
+                          </div>
+                        </div>
+                        <div class="financial-status__step-card__body">
+                          <h3 class="financial-status__step-card__title">Вам приходит анкета и контакты выбранного вами
+                            человека</h3>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide" data-aos="zoom-in" data-aos-delay="700">
+                      <div class="financial-status__step-card orange-card">
+                        <div class="financial-status__step-card__header">
+                          <span class="financial-status__step-card__step">Шаг 6</span>
+                          <div class="financial-status__step-card__icon">
+                            <img src="images/icons/fire-2.svg" alt="like-star">
+                          </div>
+                        </div>
+                        <div class="financial-status__step-card__body">
+                          <h3 class="financial-status__step-card__title">Когда происходит мэтч, с каждого списывается по
+                            одному токену</h3>
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <div class="swiper-slide" data-aos="zoom-in" data-aos-delay="600">
-                    <div class="financial-status__step-card">
-                      <div class="financial-status__step-card__header">
-                        <span class="financial-status__step-card__step">Шаг 5</span>
-                        <div class="financial-status__step-card__icon">
-                          <img src="images/icons/notes.svg" alt="notes">
+                </div>
+              </div>
+              <div class="tab-content">
+                <div class="financial-status__slider swiper-container" data-aos="fade-up" data-aos-duration="2000">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide" data-aos="zoom-in" data-aos-delay="200">
+                      <div class="financial-status__step-card gold-card">
+                        <div class="financial-status__step-card__header">
+                          <span class="financial-status__step-card__step">Шаг 1</span>
+                          <div class="financial-status__step-card__icon">
+                            <img src="images/icons/user-alt.svg" alt="user-alt">
+                          </div>
                         </div>
-                      </div>
-                      <div class="financial-status__step-card__body">
-                        <h3 class="financial-status__step-card__title">Вам приходит анкета и контакты выбранного вами
-                          человека</h3>
+                        <div class="financial-status__step-card__body">
+                          <h3 class="financial-status__step-card__title">Проходите регистрацию и оплачиваете нужный вам
+                            статус, который дает вам 100 токенов.</h3>
+                          <p class="financial-status__step-card__text">
+                            Количество токенов = количество знакомств по вашему статусу.
+                          </p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="swiper-slide" data-aos="zoom-in" data-aos-delay="700">
-                    <div class="financial-status__step-card orange-card">
-                      <div class="financial-status__step-card__header">
-                        <span class="financial-status__step-card__step">Шаг 6</span>
-                        <div class="financial-status__step-card__icon">
-                          <img src="images/icons/fire-2.svg" alt="like-star">
+                    <div class="swiper-slide" data-aos="zoom-in" data-aos-delay="300">
+                      <div class="financial-status__step-card">
+                        <div class="financial-status__step-card__header">
+                          <span class="financial-status__step-card__step">Шаг 2</span>
+                          <div class="financial-status__step-card__icon">
+                            <img src="images/icons/settings.svg" alt="settings">
+                          </div>
+                        </div>
+                        <div class="financial-status__step-card__body">
+                          <h3 class="financial-status__step-card__title">Настраиваете параметры знакомств:</h3>
+                          <ul class="financial-status__step-card__text">
+                            <li>
+                              Живое общение в рамках своего города
+                            </li>
+                            <li>
+                              Онлайн-видео связь
+                            </li>
+                            <li>
+                              Общение в месседжерах
+                            </li>
+                          </ul>
                         </div>
                       </div>
-                      <div class="financial-status__step-card__body">
-                        <h3 class="financial-status__step-card__title">Когда происходит мэтч, с каждого списывается по
-                          одному токену</h3>
+                    </div>
+                    <div class="swiper-slide" data-aos="zoom-in" data-aos-delay="400">
+                      <div class="financial-status__step-card orange-card">
+                        <div class="financial-status__step-card__header">
+                          <span class="financial-status__step-card__step">Шаг 3</span>
+                          <div class="financial-status__step-card__icon">
+                            <img src="images/icons/bag.svg" alt="bag">
+                          </div>
+                        </div>
+                        <div class="financial-status__step-card__body">
+                          <h3 class="financial-status__step-card__title">Приложение находит людей в рамках вашего
+                            финансового статуса</h3>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide" data-aos="zoom-in" data-aos-delay="500">
+                      <div class="financial-status__step-card gold-card">
+                        <div class="financial-status__step-card__header">
+                          <span class="financial-status__step-card__step">Шаг 4</span>
+                          <div class="financial-status__step-card__icon">
+                            <img src="images/icons/like-star.svg" alt="like-star">
+                          </div>
+                        </div>
+                        <div class="financial-status__step-card__body">
+                          <h3 class="financial-status__step-card__title">Вы выбираете, с кем готовы познакомиться</h3>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide" data-aos="zoom-in" data-aos-delay="600">
+                      <div class="financial-status__step-card">
+                        <div class="financial-status__step-card__header">
+                          <span class="financial-status__step-card__step">Шаг 5</span>
+                          <div class="financial-status__step-card__icon">
+                            <img src="images/icons/notes.svg" alt="notes">
+                          </div>
+                        </div>
+                        <div class="financial-status__step-card__body">
+                          <h3 class="financial-status__step-card__title">Вам приходит анкета и контакты выбранного вами
+                            человека</h3>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide" data-aos="zoom-in" data-aos-delay="700">
+                      <div class="financial-status__step-card orange-card">
+                        <div class="financial-status__step-card__header">
+                          <span class="financial-status__step-card__step">Шаг 6</span>
+                          <div class="financial-status__step-card__icon">
+                            <img src="images/icons/fire-2.svg" alt="like-star">
+                          </div>
+                        </div>
+                        <div class="financial-status__step-card__body">
+                          <h3 class="financial-status__step-card__title">Когда происходит мэтч, с каждого списывается по
+                            одному токену</h3>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -312,7 +722,7 @@
                     социального круга в соответствии с финансовыми аспектами.
                   </p>
                 </div>
-                <div class="hero5-comparison__card hero5-comparison__card-animation" data-aos="fade-left"
+                <div class="hero5-comparison__card animation-img__card" data-aos="fade-left"
                   data-aos-duration="1000" data-aos-delay="400">
                   <img class="hero5-comparison__card-img-bg animation-img" src="images/dollar.svg" alt="dollar">
                   <div class="hero5-comparison__card-header">
@@ -328,7 +738,7 @@
                   </p>
                 </div>
               </div>
-              <div class="hero5-comparison__card orange-card hero5-comparison__card-animation" data-aos="fade-up"
+              <div class="hero5-comparison__card orange-card animation-img__card" data-aos="fade-up"
                 data-aos-duration="1000" data-aos-delay="600">
                 <div class="hero5-comparison__card-header">
                   <h3 class="hero5-comparison__card-title">
@@ -759,7 +1169,7 @@
       <!-- footer -->
       <footer class="footer">
         <div class="container">
-          <ul class="footer-list" >
+          <ul class="footer-list">
             <li class="footer-item">
               <a class="footer-link" href="#!">Политика конфиденциальности</a>
             </li>

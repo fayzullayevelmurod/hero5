@@ -140,10 +140,31 @@ body {
   gap: 6px;
 }
 .header-right__btn.sale-btn {
-  background: linear-gradient(277.24deg, #ffab22 -11.68%, #ff5313 140.19%);
+  background: #ff6e00;
+  background: linear-gradient(135deg, #ff6e00 0%, #ff6e00 40%, #ffffff 50%, #ff6e00 60%, #ff6e00 100%);
+  background-size: 300% 100%;
+  animation: shimmer 5s linear infinite;
+}
+@keyframes shimmer {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 .header-right__btn.orange-btn {
-  background: #ff5313;
+  background: linear-gradient(135deg, #ff5313 0%, #ff7a4d 50%, #ff5313 100%);
+  background-size: 200% 100%;
+  animation: shimmer 2s linear infinite;
+}
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
 }
 .header-social__media {
   display: flex;
@@ -404,9 +425,25 @@ body {
   line-height: 28px;
   color: #929292;
 }
-.financial-status__slider {
+.financial-status .tab-content {
+  display: none;
   max-width: calc(100% - 442px);
-  z-index: 2;
+  animation: fadeIn 0.8s ease-in-out;
+}
+.financial-status .tab-content.active {
+  display: block;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.financial-status__slider {
+  width: 100%;
+  height: 100%;
 }
 .financial-status__slider .swiper-wrapper {
   height: 100%;
@@ -657,11 +694,29 @@ body {
   display: inline-block;
   font-weight: 600;
   color: #fff;
-  border: 1px solid #131313;
   transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
 }
-.hero5-comparison__soon-btn:hover {
-  background: transparent;
+.hero5-comparison__soon-btn::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #000000, #333333, #000000);
+  background-size: 200% 200%;
+  z-index: -1;
+  animation: shimmer 1.5s linear infinite;
+}
+@keyframes shimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
 }
 .hero5-comparison__soon-img img {
   position: absolute;
@@ -1085,6 +1140,8 @@ body {
   padding: 144px 0 43px 0;
   background: url(../images/footer-bg.png) no-repeat center center/cover, #F5F5F5;
   border-radius: 60px 60px 0 0;
+  background-size: calc(100% - 60px) 100%;
+  overflow: hidden;
 }
 .footer .container {
   display: flex;
