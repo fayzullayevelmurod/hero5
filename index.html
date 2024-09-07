@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HERO 5</title>
     <link rel="icon" href="images/header-logo.svg">
+    <!-- swiper css link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- normalize css link -->
     <link rel="stylesheet" href="libs/normalize.css">
     <!-- css link -->
@@ -79,9 +81,9 @@
             <div class="about-us-content">
               <h2 class="about-us__title">Hero5 – это</h2>
               <h2 class="title">Территория бизнес-знакомств</h2>
-             </div>
+            </div>
 
-             <div class="about-us-cards">
+            <div class="about-us-cards">
               <div class="about-us-card__duble">
                 <div class="about-us__card comment">
                   <h3 class="about-us-card__title">Рассказывайте <br> о своем бизнесе</h3>
@@ -89,9 +91,9 @@
                 </div>
                 <div class="about-us__card plus">
                   <h3 class="about-us-card__title">Находите новых <br> клиентов, партнеров <br> и инвесторов</h3>
-                  <img  class="about-us-card__img plus-img__one" src="images/plus.svg" alt="msg">
-                  <img  class="about-us-card__img plus-img__two" src="images/plus.svg" alt="msg">
-                  <img  class="about-us-card__img plus-img__three" src="images/plus.svg" alt="msg">
+                  <img class="about-us-card__img plus-img__one" src="images/plus.svg" alt="msg">
+                  <img class="about-us-card__img plus-img__two" src="images/plus.svg" alt="msg">
+                  <img class="about-us-card__img plus-img__three" src="images/plus.svg" alt="msg">
                 </div>
               </div>
               <div class="about-us__card up-money">
@@ -105,13 +107,173 @@
                 </div>
                 <div class="about-us__card star">
                   <h3 class="about-us-card__title">Получайте ценные <br> рекомендации от <br> опытных экспертов</h3>
-                  <img  class="about-us-card__img" src="images/star.svg" alt="star">
+                  <img class="about-us-card__img" src="images/star.svg" alt="star">
                 </div>
               </div>
-             </div>
+            </div>
           </div>
         </section>
         <!-- about us -->
+
+        <!-- financial-status -->
+        <section class="financial-status">
+          <div class="container">
+            <div class="financial-status__content">
+              <h2 class="title">Ключевой <br> фильтр Hero5 – <br>финансовый статус</h2>
+              <p class="financial-status__text">
+                Вы знакомитесь и общаетесь в рамках определенного финансового статуса, который подтверждается вашим
+                выбранным тарифом.  Как это работает?
+              </p>
+              <div class="swiper-btns">
+                <button class="swiper-btn swiper-btn__prev">
+                  <img src="images/icons/next-arrow.svg" alt="prev-arrow">
+                </button>
+                <button class="swiper-btn swiper-btn__next">
+                  <img src="images/icons/prev-arrow.svg" alt="next-arrow">
+                </button>
+              </div>
+            </div>
+            <div class="financial-status__content-right">
+
+              <div class="financial-status__items">
+                <div class="financial-status__item">
+                  <div class="financial-status__item-content">
+                    <img src="images/icons/star.svg" alt="star">
+                    <span class="financial-status__item-title">Star</span>
+                  </div>
+                  <span class="financial-status__item-price">100$</span>
+                </div>
+                <div class="financial-status__item">
+                  <div class="financial-status__item-content">
+                    <img src="images/icons/trophy.svg" alt="trophy">
+                    <span class="financial-status__item-title">Silver</span>
+                  </div>
+                  <span class="financial-status__item-price">500$</span>
+                </div>
+                <div class="financial-status__item">
+                  <div class="financial-status__item-content">
+                    <img src="images/icons/medal.svg" alt="medal">
+                    <span class="financial-status__item-title">Gold</span>
+                  </div>
+                  <span class="financial-status__item-price">1000$</span>
+                </div>
+                <div class="financial-status__item">
+                  <div class="financial-status__item-content">
+                    <img src="images/icons/briefcase.svg" alt="briefcase">
+                    <span class="financial-status__item-title">Business</span>
+                  </div>
+                  <span class="financial-status__item-price">5000$</span>
+                </div>
+                <div class="financial-status__item">
+                  <div class="financial-status__item-content">
+                    <img src="images/icons/fire.svg" alt="fire">
+                    <span class="financial-status__item-title">Premium</span>
+                  </div>
+                  <span class="financial-status__item-price">10000$</span>
+                </div>
+              </div>
+
+              <div class="financial-status__slider swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="financial-status__step-card gold-card">
+                      <div class="financial-status__step-card__header">
+                        <span class="financial-status__step-card__step">Шаг 1</span>
+                        <div class="financial-status__step-card__icon">
+                          <img src="images/icons/user-alt.svg" alt="user-alt">
+                        </div>
+                      </div>
+                      <div class="financial-status__step-card__body">
+                        <h3 class="financial-status__step-card__title">Проходите регистрацию и оплачиваете нужный вам
+                          статус, который дает вам 100 токенов.</h3>
+                        <p class="financial-status__step-card__text">
+                          Количество токенов = количество знакомств по вашему статусу.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="financial-status__step-card">
+                      <div class="financial-status__step-card__header">
+                        <span class="financial-status__step-card__step">Шаг 2</span>
+                        <div class="financial-status__step-card__icon">
+                          <img src="images/icons/settings.svg" alt="settings">
+                        </div>
+                      </div>
+                      <div class="financial-status__step-card__body">
+                        <h3 class="financial-status__step-card__title">Настраиваете параметры знакомств:</h3>
+                        <ul class="financial-status__step-card__text">
+                          <li>
+                            Живое общение в рамках своего города
+                          </li>
+                          <li>
+                            Онлайн-видео связь
+                          </li>
+                          <li>
+                            Общение в месседжерах
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="financial-status__step-card orange-card">
+                      <div class="financial-status__step-card__header">
+                        <span class="financial-status__step-card__step">Шаг 3</span>
+                        <div class="financial-status__step-card__icon">
+                          <img src="images/icons/bag.svg" alt="bag">
+                        </div>
+                      </div>
+                      <div class="financial-status__step-card__body">
+                        <h3 class="financial-status__step-card__title">Приложение находит людей в рамках вашего финансового статуса</h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="financial-status__step-card gold-card">
+                      <div class="financial-status__step-card__header">
+                        <span class="financial-status__step-card__step">Шаг 4</span>
+                        <div class="financial-status__step-card__icon">
+                          <img src="images/icons/like-star.svg" alt="like-star">
+                        </div>
+                      </div>
+                      <div class="financial-status__step-card__body">
+                        <h3 class="financial-status__step-card__title">Вы выбираете, с кем готовы познакомиться</h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="financial-status__step-card">
+                      <div class="financial-status__step-card__header">
+                        <span class="financial-status__step-card__step">Шаг 5</span>
+                        <div class="financial-status__step-card__icon">
+                          <img src="images/icons/notes.svg" alt="notes">
+                        </div>
+                      </div>
+                      <div class="financial-status__step-card__body">
+                        <h3 class="financial-status__step-card__title">Вам приходит анкета и контакты выбранного вами человека</h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="financial-status__step-card orange-card">
+                      <div class="financial-status__step-card__header">
+                        <span class="financial-status__step-card__step">Шаг 6</span>
+                        <div class="financial-status__step-card__icon">
+                          <img src="images/icons/fire-2.svg" alt="like-star">
+                        </div>
+                      </div>
+                      <div class="financial-status__step-card__body">
+                        <h3 class="financial-status__step-card__title">Когда происходит мэтч, с каждого списывается по одному токену</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- financial-status -->
 
       </main>
       <!-- main -->
@@ -126,6 +288,8 @@
 
     </div>
 
+    <!-- swiper js link -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- custom js -->
     <script src="./js/main.js"></script>
   </body>
