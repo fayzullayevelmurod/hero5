@@ -356,6 +356,31 @@ body {
 .financial-status {
   padding-top: 120px;
 
+  .animation-title {
+    background: linear-gradient(45deg, #f4c270, #FFE4DA, #45b7d1, #F5F5F5);
+    background-size: 200% 200%;
+    animation: shimmer 5s ease-in-out infinite;
+    background-size: 300% 300%;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: gradientAnimation 5s ease infinite;
+  }
+
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
   .container {
     position: relative;
     z-index: 3;
@@ -422,6 +447,7 @@ body {
   }
 
   &__item {
+    cursor: pointer;
     padding: 12px 33px 12px 19px;
     background: #F5F5F5;
     border-radius: 24px;
@@ -1191,6 +1217,10 @@ body {
         background: #FFE4DA;
       }
 
+      &.gold-card {
+        background: #FFF1DA;
+      }
+
       .flip-card__plus-btn {
         transform: rotate(45deg);
       }
@@ -1252,3 +1282,46 @@ body {
 }
 
 // business-networking end
+
+// footer start
+.footer {
+  padding: 144px 0 43px 0;
+  background: url(../images/footer-bg.png) no-repeat center center / cover, #F5F5F5;
+  border-radius: 60px 60px 0 0;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-list {
+    display: flex;
+    gap: 47px;
+  }
+
+  &-link {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 22px;
+    opacity: .5;
+    color: #131313;
+  }
+
+  &-social {
+    display: flex;
+    gap: 4px;
+  }
+
+  &-social__link {
+    border: 1px solid #131313;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+// footer end

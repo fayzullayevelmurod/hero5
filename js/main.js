@@ -11,6 +11,13 @@ window.addEventListener('DOMContentLoaded', () => {
     speed: 700,
   });
 
+  const financialStatusItems = document.querySelectorAll('.financial-status__item');
+  financialStatusItems.forEach((item, index) => {
+    item.addEventListener('click', () => {
+      financialStatusSlider.slideTo(index);
+    });
+  });
+
   // hero5-comparison__soon-slider
   const hero5ComparisonSoonSlider = new Swiper('.hero5-comparison__soon-slider', {
     slidesPerView: 1,
