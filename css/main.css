@@ -92,7 +92,7 @@ body {
 }
 
 .header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -283,9 +283,6 @@ body {
   right: 11px;
   width: 176px;
   height: 187px;
-}
-.about-us .about-us-card__img {
-  animation: floatAnimation 3s ease-in-out infinite;
 }
 @keyframes floatAnimation {
   0%, 100% {
@@ -506,18 +503,24 @@ body {
   cursor: pointer;
   position: relative;
   z-index: 1;
-}
-.hero5-comparison__card:hover .plus-btn img {
-  transform: rotate(45deg);
-}
-.hero5-comparison__card:hover .hero5-comparison__card-info {
-  opacity: 1;
+  overflow: hidden;
 }
 .hero5-comparison__card.gold-card {
   background: #FFF1DA;
 }
 .hero5-comparison__card.orange-card {
   background: #FFE4DA;
+}
+.hero5-comparison__card.orange-card .hero5-comparison__card-img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  -o-object-fit: contain;
+     object-fit: contain;
+  z-index: -1;
 }
 .hero5-comparison__card-header {
   display: flex;
@@ -550,6 +553,9 @@ body {
 .hero5-comparison__card .plus-btn img {
   transition: all 0.3s ease-in-out;
 }
+.hero5-comparison__card .plus-btn.active img {
+  transform: rotate(45deg);
+}
 .hero5-comparison__card-title {
   font-size: 24px;
   font-weight: 700;
@@ -562,6 +568,9 @@ body {
   line-height: 22px;
   opacity: 0;
   transition: all 0.3s ease-in-out;
+}
+.hero5-comparison__card-info.active {
+  opacity: 1;
 }
 .hero5-comparison__duble-card {
   display: flex;

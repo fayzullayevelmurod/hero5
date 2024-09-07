@@ -95,7 +95,7 @@ body {
 
 // header start
 .header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -332,9 +332,9 @@ body {
     }
   }
 
-  .about-us-card__img {
-    animation: floatAnimation 3s ease-in-out infinite;
-  }
+  // .about-us-card__img {
+  //   animation: floatAnimation 3s ease-in-out infinite;
+  // }
 
   @keyframes floatAnimation {
 
@@ -606,16 +606,8 @@ body {
     cursor: pointer;
     position: relative;
     z-index: 1;
+    overflow: hidden;
 
-    &:hover {
-      .plus-btn img {
-        transform: rotate(45deg);
-      }
-
-      .hero5-comparison__card-info {
-        opacity: 1;
-      }
-    }
 
     &.gold-card {
       background: #FFF1DA;
@@ -623,6 +615,16 @@ body {
 
     &.orange-card {
       background: #FFE4DA;
+
+      .hero5-comparison__card-img {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: fit-content;
+        object-fit: contain;
+        z-index: -1;
+      }
     }
 
     &-header {
@@ -657,6 +659,12 @@ body {
       img {
         transition: all .3s ease-in-out;
       }
+
+      &.active {
+        img {
+          transform: rotate(45deg);
+        }
+      }
     }
 
     &-title {
@@ -672,6 +680,10 @@ body {
       line-height: 22px;
       opacity: 0;
       transition: all .3s ease-in-out;
+
+      &.active {
+        opacity: 1;
+      }
     }
   }
 
