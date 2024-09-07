@@ -980,14 +980,14 @@ body {
       // overflow: hidden;
       cursor: pointer;
       position: relative;
-    
+
       img {
         width: 100%;
         height: 100%;
         border-radius: 50%;
         display: block;
       }
-    
+
       &::before,
       &::after {
         content: '';
@@ -1001,36 +1001,40 @@ body {
         transform: translate(-50%, -50%) scale(1);
         opacity: 0;
       }
-    
+
       &::before {
         animation: pulse 3s infinite;
       }
-    
+
       &::after {
         animation: pulse 3s infinite 1.5s;
       }
-    
+
       @keyframes pulse {
         0% {
           transform: translate(-50%, -50%) scale(1);
           opacity: 0;
           border-color: lightcoral;
         }
+
         25% {
           transform: translate(-50%, -50%) scale(1.1);
           opacity: 0.5;
           border-color: lightcoral;
         }
+
         50% {
           transform: translate(-50%, -50%) scale(1.2);
           opacity: 0.8;
           border-color: lightcoral;
         }
+
         75% {
           transform: translate(-50%, -50%) scale(1.3);
           opacity: 0.3;
           border-color: lightcoral;
         }
+
         100% {
           transform: translate(-50%, -50%) scale(1.4);
           opacity: 0;
@@ -1070,8 +1074,180 @@ body {
     }
   }
 
-  &__cards {
-    
+  .flip-card {
+    position: relative;
+    z-index: 1;
+    border-radius: 24px;
+    perspective: 1000px;
+    height: 438px;
+    cursor: pointer;
+
+    &:hover {
+      .flip-card__inner {
+        transform: rotateY(180deg);
+      }
+    }
+
+    &__inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+    }
+
+    &__plus-btn {
+      width: 40px;
+      height: 40px;
+      top: 24px;
+      right: 24px;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      position: absolute;
+      z-index: 2;
+    }
+
+    &__front,
+    &__back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 24px;
+    }
+
+    &__front {
+      background: #F5F5F5;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      gap: 10px;
+    }
+
+    &__front-img {
+      position: absolute;
+      z-index: -1;
+      border-radius: inherit;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &__info {
+      background: #fff;
+      border-radius: 13px;
+      padding: 12px;
+      width: fit-content;
+      margin-left: 24px;
+      margin-top: auto;
+    }
+
+    &__name {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 28px;
+      margin-bottom: 4px;
+      display: block;
+    }
+
+    &__status {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 22px;
+      display: block;
+      color: #929292;
+    }
+
+    &__text-wrapper {
+      padding: 24px;
+      background: #F5F5F5;
+      width: 100%;
+      border-radius: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      min-height: 148px;
+    }
+
+    &__text {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 22px;
+      opacity: .8;
+    }
+
+    &__back {
+      background: #fff;
+      transform: rotateY(180deg);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+
+      &.orange-card {
+        background: #FFE4DA;
+      }
+
+      .flip-card__plus-btn {
+        transform: rotate(45deg);
+      }
+    }
+
+
+    &__back-content {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      padding-top: 114px;
+    }
+
+    &__back-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 28px;
+      gap: 16px;
+    }
+
+    &__back-img {
+      width: 82px;
+      height: 82px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    &__back-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__back-name {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 28px;
+    }
+
+    &__back-status {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 22px;
+      color: #929292;
+    }
+
+    &__back-text {
+      flex-grow: 1;
+      opacity: 0.8;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 22px;
+    }
+
+    &__back-list {
+      padding-left: 25px;
+      list-style: disc;
+    }
   }
 }
 

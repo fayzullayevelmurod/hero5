@@ -893,4 +893,156 @@ body {
   font-size: 10px;
   font-weight: 600;
   line-height: 14px;
+}
+.business-networking .flip-card {
+  position: relative;
+  z-index: 1;
+  border-radius: 24px;
+  perspective: 1000px;
+  height: 438px;
+  cursor: pointer;
+}
+.business-networking .flip-card:hover .flip-card__inner {
+  transform: rotateY(180deg);
+}
+.business-networking .flip-card__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+.business-networking .flip-card__plus-btn {
+  width: 40px;
+  height: 40px;
+  top: 24px;
+  right: 24px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 2;
+}
+.business-networking .flip-card__front, .business-networking .flip-card__back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 24px;
+}
+.business-networking .flip-card__front {
+  background: #F5F5F5;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  gap: 10px;
+}
+.business-networking .flip-card__front-img {
+  position: absolute;
+  z-index: -1;
+  border-radius: inherit;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.business-networking .flip-card__info {
+  background: #fff;
+  border-radius: 13px;
+  padding: 12px;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: 24px;
+  margin-top: auto;
+}
+.business-networking .flip-card__name {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  margin-bottom: 4px;
+  display: block;
+}
+.business-networking .flip-card__status {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  display: block;
+  color: #929292;
+}
+.business-networking .flip-card__text-wrapper {
+  padding: 24px;
+  background: #F5F5F5;
+  width: 100%;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 148px;
+}
+.business-networking .flip-card__text {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  opacity: 0.8;
+}
+.business-networking .flip-card__back {
+  background: #fff;
+  transform: rotateY(180deg);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+.business-networking .flip-card__back.orange-card {
+  background: #FFE4DA;
+}
+.business-networking .flip-card__back .flip-card__plus-btn {
+  transform: rotate(45deg);
+}
+.business-networking .flip-card__back-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 114px;
+}
+.business-networking .flip-card__back-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 28px;
+  gap: 16px;
+}
+.business-networking .flip-card__back-img {
+  width: 82px;
+  height: 82px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.business-networking .flip-card__back-info {
+  display: flex;
+  flex-direction: column;
+}
+.business-networking .flip-card__back-name {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+}
+.business-networking .flip-card__back-status {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  color: #929292;
+}
+.business-networking .flip-card__back-text {
+  flex-grow: 1;
+  opacity: 0.8;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+}
+.business-networking .flip-card__back-list {
+  padding-left: 25px;
+  list-style: disc;
 }/*# sourceMappingURL=main.css.map */

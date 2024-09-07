@@ -39,4 +39,11 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // business-networking__swiper
+  const businessNetworkingSwiper = new Swiper('.business-networking__swiper', {
+    slidesPerView: 3,
+    spaceBetween: 12,
+    speed: 700,
+  });
 });
