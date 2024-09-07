@@ -124,7 +124,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
       // Har bir rasm uchun transform qo'llaymiz
       images.forEach((image) => {
-        image.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.1)`; // Kattalashtirish ham qo'shildi
+        image.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
       });
     });
 
