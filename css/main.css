@@ -84,6 +84,12 @@ body {
   margin: 0 auto;
 }
 
+section {
+  position: relative;
+  z-index: 10;
+  background: #fff;
+}
+
 .title {
   font-family: "Unbounded", "Manrope", sans-serif;
   font-size: 48px;
@@ -516,7 +522,8 @@ body {
 }
 
 .application-conveniences {
-  padding: 156px 0;
+  padding: 156px 0 0 0;
+  position: relative;
 }
 .application-conveniences .title {
   text-align: center;
@@ -803,7 +810,7 @@ body {
 }
 .business-networking .title {
   text-align: center;
-  margin: 16px 0 24px 0;
+  padding: 16px 0 24px 0;
 }
 .business-networking__text {
   font-size: 20px;

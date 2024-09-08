@@ -86,6 +86,12 @@ body {
   margin: 0 auto;
 }
 
+section {
+  position: relative;
+  z-index: 10;
+  background: #fff;
+}
+
 .title {
   font-family: "Unbounded", "Manrope", sans-serif;
   font-size: 48px;
@@ -157,6 +163,7 @@ body {
         0% {
           background-position: 100% 50%;
         }
+
         100% {
           background-position: 0% 50%;
         }
@@ -171,6 +178,7 @@ body {
           0% {
             background-position: 200% 0;
           }
+
           100% {
             background-position: -200% 0;
           }
@@ -615,7 +623,9 @@ body {
 
 // application-conveniences start
 .application-conveniences {
-  padding: 156px 0;
+  padding: 156px 0 0 0;
+  position: relative;
+
 
   .title {
     text-align: center;
@@ -845,6 +855,7 @@ body {
         0% {
           background-position: 0% 50%;
         }
+
         100% {
           background-position: 200% 50%;
         }
@@ -962,7 +973,7 @@ body {
 
   .title {
     text-align: center;
-    margin: 16px 0 24px 0;
+    padding: 16px 0 24px 0;
   }
 
   &__text {
@@ -1399,5 +1410,3 @@ body {
 }
 
 // footer end
-
-.animation-img {}

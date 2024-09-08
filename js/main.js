@@ -151,4 +151,30 @@ window.addEventListener('DOMContentLoaded', () => {
   } catch (error) {
 
   }
+
+
+  // const applicationConveniencesSection = document.querySelector('.application-conveniences');
+  // const phoneImg = document.querySelector('.phone__img');
+
+  // let isActive = false; // active klassi qo'shilganligini kuzatish uchun flag
+
+  // window.addEventListener('scroll', function () {
+  //   const sectionTop = applicationConveniencesSection.getBoundingClientRect().top;
+  //   const windowHeight = window.innerHeight;
+
+  //   // Agar section yuqori qismi ekran ichida bo'lsa
+  //   if (sectionTop < windowHeight && sectionTop > 0) {
+  //     if (!isActive) {
+  //       phoneImg.classList.add('active');
+  //       applicationConveniencesSection.classList.add('active');
+  //       isActive = true; // active klassi qo'shilganini belgilash
+  //     }
+  //   } else {
+  //     // Agar section chiqib ketsa
+  //     if (isActive) {
+  //       applicationConveniencesSection.classList.remove('active');
+  //       isActive = false; // active klassi olinganini belgilash
+  //     }
+  //   }
+  // });
 });
