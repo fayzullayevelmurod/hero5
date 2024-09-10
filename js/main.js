@@ -155,6 +155,20 @@ window.addEventListener('DOMContentLoaded', () => {
     slidesPerView: 3,
     spaceBetween: 12,
     speed: 700,
+    breakpoints: {
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 12,
+      },
+      744: {
+        slidesPerView: 2,
+        spaceBetween: 12,
+      },
+      0: {
+        slidesPerView: 1.3,
+        spaceBetween: 12,
+      }
+    }
   });
 
   const cards = document.querySelectorAll('.animation-img__card');

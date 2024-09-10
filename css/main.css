@@ -795,7 +795,7 @@ section {
   display: block;
   width: -moz-fit-content;
   width: fit-content;
-  font-weight: 600;
+  font-weight: 700;
   color: #131313;
   border: none;
   transition: all 0.3s ease-in-out;
@@ -828,6 +828,7 @@ section {
   background: url(../images/map.png) no-repeat center center/cover;
   position: relative;
   margin-bottom: 120px;
+  background-size: 100% 100%;
 }
 .business-networking__user {
   position: absolute;
@@ -845,40 +846,40 @@ section {
   visibility: visible;
 }
 .business-networking__user.one {
-  top: 82px;
-  left: 68px;
+  top: 17%;
+  left: 7%;
 }
 .business-networking__user.two {
   top: 0;
-  left: 327px;
+  left: 28%;
 }
 .business-networking__user.three {
-  top: 26px;
-  left: 508px;
+  top: 5%;
+  left: 42%;
 }
 .business-networking__user.four {
-  top: 21px;
-  left: 580px;
+  top: 5%;
+  left: 52%;
 }
 .business-networking__user.five {
-  top: 214px;
-  left: 266px;
+  top: 48%;
+  left: 23%;
 }
 .business-networking__user.six {
-  top: 111px;
-  left: 472px;
+  top: 32%;
+  left: 40%;
 }
 .business-networking__user.seven {
-  top: 66px;
-  right: 200px;
+  top: 12%;
+  right: 18%;
 }
 .business-networking__user.eight {
-  top: 45px;
-  right: 25px;
+  top: 12%;
+  right: 3%;
 }
 .business-networking__user.nine {
-  bottom: 66px;
-  right: 6px;
+  bottom: 14%;
+  right: 0;
 }
 .business-networking__user-content {
   display: flex;
@@ -1288,5 +1289,205 @@ section {
   }
   .financial-status .swiper-btns {
     display: none;
+  }
+  .financial-status__text {
+    max-width: 100%;
+  }
+  .financial-status__content {
+    gap: 24px;
+  }
+  .financial-status__content-right {
+    flex-direction: column;
+  }
+  .financial-status .tab-content {
+    max-width: 100%;
+  }
+  .financial-status__step-card {
+    min-height: 448px;
+  }
+  .about-page .phone__img {
+    width: 60%;
+    top: 17%;
+  }
+  .application-conveniences {
+    padding-top: 120px;
+  }
+  .about-page .test__wrap,
+  .about-page .betatest2__wrap {
+    left: 20px;
+    max-width: 297px;
+  }
+  .about-page .test__title {
+    font-size: 32px;
+    line-height: 38px;
+  }
+  .about-page .betatest__wrap,
+  .about-page .betatest3__wrap {
+    max-width: 297px;
+    right: 20px;
+  }
+  @keyframes phone_move {
+    0% {
+      transform: scale(1) translateY(1600px);
+      background-image: url("../images/phone-1.png");
+      width: 80%;
+    }
+    20% {
+      transform: scale(1) translateY(0);
+      background-image: url("../images/phone-1.png");
+      width: 80%;
+    }
+    22% {
+      transform: scale(1);
+      background-image: url("../images/phone2.png");
+      margin-top: 0;
+      width: 60%;
+    }
+    30% {
+      transform: rotate(0) translateX(170px);
+      background-image: url("../images/phone2.png");
+      width: 60%;
+    }
+    32%, 35% {
+      background-image: url("../images/phone3.png");
+      width: 60%;
+    }
+    40% {
+      transform: rotate(0) translateX(-189px);
+      background-image: url("../images/phone3.png");
+      width: 60%;
+    }
+    42%, 45% {
+      background-image: url("../images/phone4.png");
+      width: 60%;
+    }
+    50% {
+      transform: rotate(0) translateX(178px) translateY(60px);
+      background-image: url("../images/phone4.png");
+      width: 60%;
+    }
+    52%, 55% {
+      background-image: url("../images/phone4.png");
+      width: 60%;
+    }
+    60% {
+      transform: rotate(-10deg) translateX(0px);
+      background-image: url("../images/phone4.png");
+      width: 60%;
+      opacity: 1;
+    }
+    65%, 100% {
+      transform: scale(0.47) translateY(0);
+      background-image: url("../images/phone4.png");
+      width: 60%;
+      opacity: 0;
+    }
+  }
+  .hero5-comparison__cards {
+    flex-direction: column;
+  }
+  .hero5-comparison__cards > div {
+    max-width: 100%;
+  }
+  .hero5-comparison__card.orange-card .hero5-comparison__card-img {
+    bottom: -95px;
+    width: 54%;
+    right: 23px;
+    left: unset;
+  }
+  .hero5-comparison__soon-raketa {
+    width: 351.62px;
+    height: 351.62px;
+    top: 40px;
+    right: -85px;
+  }
+  .hero5-comparison__soon-title {
+    margin: 29px 0 32px 0;
+  }
+  .hero5-comparison__soon {
+    padding: 32px;
+  }
+  .hero5-comparison__soon-slider {
+    max-width: 100%;
+  }
+  .hero5-comparison__soon-sharik-orange {
+    right: 107px;
+    width: 164px;
+    height: 174px;
+  }
+  .hero5-comparison__soon-tanga-2 {
+    right: 168px;
+    bottom: 69px;
+    top: unset;
+    width: 91px;
+    height: 76px;
+  }
+  .hero5-comparison__soon-sharik {
+    display: none;
+  }
+  .hero5-comparison__soon-text {
+    max-width: 413px;
+  }
+  .hero5-comparison__soon-title {
+    max-width: 522px;
+  }
+  .hero5-comparison__soon-tanga-3 {
+    filter: blur(3px);
+    width: 84px;
+    height: 35px;
+    top: -3px;
+    right: 12px;
+  }
+  .hero5-comparison__soon-tanga {
+    display: none;
+  }
+  .hero5-comparison__soon-tanga-blur {
+    width: 79.3px;
+    height: 59px;
+    bottom: 37px;
+    right: -37px;
+    left: unset;
+  }
+  .hero5-comparison__soon .swiper-pagination {
+    bottom: 32px;
+    right: 0;
+    left: unset;
+  }
+  .business-networking__map {
+    margin-bottom: 80px;
+    height: 283px;
+  }
+  .business-networking__user.eight {
+    top: 6%;
+    right: -6%;
+  }
+  .business-networking__user.seven {
+    top: 12%;
+    right: 7%;
+  }
+  .business-networking__user.nine {
+    bottom: 0%;
+    right: -12%;
+  }
+  .business-networking .title {
+    padding: 12px 0 20px 0;
+  }
+  .business-networking {
+    margin-bottom: 80px;
+  }
+  .footer-list {
+    flex-direction: column;
+    gap: 4px;
+  }
+  .footer .container {
+    flex-direction: column;
+    gap: 16px;
+    align-items: start;
+  }
+  .footer {
+    padding: 40px 0 130px 0;
+    background-position: bottom;
+    background-size: 106% 39%;
+    border-radius: 30px 30px;
   }
 }/*# sourceMappingURL=main.css.map */
