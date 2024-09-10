@@ -75,6 +75,9 @@ body {
   color: #131313;
   margin: 0;
 }
+body.no-scroll {
+  overflow: hidden;
+}
 
 .wrapper {
   overflow: hidden;
@@ -1795,17 +1798,17 @@ section {
     display: none;
   }
   .about-page .phone__wrap .mobile-phone__img1 {
-    top: 8%;
+    top: 16%;
     right: -75px;
-    width: 79%;
+    width: 290px;
   }
   .about-page .phone__wrap .mobile-phone__img2 {
-    top: 34%;
-    right: -21%;
+    top: 45%;
+    right: -72px;
   }
   .about-page .phone__wrap .mobile-phone__img3 {
-    top: 73%;
-    right: -20%;
+    top: 80%;
+    right: -55px;
   }
   .about-page .phone__wrap {
     margin-top: 50px;
@@ -1815,10 +1818,13 @@ section {
     align-items: start;
   }
   .about-page {
-    flex-direction: row;
-    flex-wrap: wrap;
-    row-gap: 150px;
+    row-gap: 65px;
     padding: 0 20px;
+    max-width: 100%;
+    width: 100%;
+    align-items: start;
+    justify-content: space-between;
+    padding-bottom: 50px;
   }
   .about-page .test__title {
     font-size: 24px;
@@ -1830,7 +1836,7 @@ section {
     line-height: 20px;
   }
   .about-page .mobile-info-block {
-    max-width: 189px;
+    max-width: 60%;
   }
   .hero5-comparison__card {
     padding: 20px;
@@ -1917,7 +1923,6 @@ section {
     padding-bottom: 6px;
   }
   .business-networking__map {
-    background-size: cover;
     height: 168px;
     width: calc(100% + 40px);
     margin: 0 -20px 80px -20px;
@@ -1999,5 +2004,13 @@ section {
   }
   .intro .falling-image.orange {
     display: none !important;
+  }
+  .about-us-cards > .about-us-card__duble:first-child {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .business-networking__map {
+    block-size: cover;
   }
 }/*# sourceMappingURL=main.css.map */

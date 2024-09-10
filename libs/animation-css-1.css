@@ -1691,7 +1691,7 @@
   box-shadow: 0px 22px 67px rgba(247, 208, 70, 0.42)
 }
 
-@media (min-width: 577px) {
+@media (min-width: 744px) {
   .yellow_btn {
     padding: 31px 38px;
     width: 301px;
@@ -1810,7 +1810,7 @@
   margin-right: 8px
 }
 
-@media (min-width: 577px) {
+@media (min-width: 744px) {
   .betatest-dialog__wrap .betatest-dialog {
     width: 504px
   }
@@ -1887,7 +1887,7 @@
   text-decoration: none
 }
 
-@media (min-width: 577px) {
+@media (min-width: 744px) {
   .navbar__menu {
     position: fixed;
     top: 25px;
@@ -1964,7 +1964,7 @@
   margin-right: 8px
 }
 
-@media (min-width: 577px) {
+@media (min-width: 744px) {
   .stores__wrap {
     flex-direction: row
   }
@@ -2056,7 +2056,7 @@
   margin-right: 8px
 }
 
-@media (min-width: 577px) {
+@media (min-width: 744px) {
   .stores__wrap {
     flex-direction: row
   }
@@ -2404,7 +2404,7 @@
   margin-right: 90%
 }
 
-@media (min-width: 577px) {
+@media (min-width: 744px) {
   .interview-content__wrap .interview-first-page .title {
     margin-bottom: 44px
   }
@@ -2694,7 +2694,7 @@
   top: 7.32%
 }
 
-@media (min-width: 577px) {
+@media (min-width: 744px) {
   .about-page {
     min-height: 1000vh;
     --height: 608px;
@@ -3181,7 +3181,7 @@
   top: 139.34px
 }
 
-@media (min-width: 577px) {
+@media (min-width: 744px) {
   .faq-page .static {
     display: block
   }
@@ -3249,7 +3249,7 @@
   line-height: 140%
 }
 
-@media (min-width: 577px) {
+@media (min-width: 744px) {
   .faq__wrap {
     width: auto;
     margin: 111px 218px 132px 218px
@@ -3322,7 +3322,7 @@
   counter-increment: item
 }
 
-@media (min-width: 577px) {
+@media (min-width: 744px) {
 
   .privacy-policy-page,
   .terms-of-use-page,
@@ -3491,7 +3491,7 @@
   transition: opacity 0.5s
 }
 
-@media (min-width: 577px) {
+@media (min-width: 744px) {
   .blog-page .blog-title {
     font-size: 55px;
     max-width: 944px;
@@ -3514,7 +3514,7 @@
   }
 }
 
-@media (min-width: 577px) {
+@media (min-width: 744px) {
   .blog-page-body .footer {
     position: relative
   }
@@ -3618,7 +3618,7 @@
   color: #A2A2A2
 }
 
-@media (min-width: 577px) {
+@media (min-width: 744px) {
   .blog-content-page .blog-content {
     max-width: 818px
   }
@@ -3634,7 +3634,7 @@
   }
 }
 
-@media (min-width: 577px) {
+@media (min-width: 744px) {
   .blog-content-page-body .footer {
     position: relative
   }
@@ -3726,7 +3726,7 @@
   color: #FAFAFA
 }
 
-@media (min-width: 577px) {
+@media (min-width: 744px) {
   .cookie-dialog__wrap {
     left: 40px;
     padding: 32px;
@@ -3831,7 +3831,7 @@
   color: #707781
 }
 
-@media (min-width: 577px) {
+@media (min-width: 744px) {
   .support__wrap .support__send {
     width: auto
   }
