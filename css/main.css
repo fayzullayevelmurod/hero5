@@ -73,6 +73,7 @@ body {
   font-size: 16px;
   line-height: 22px;
   color: #131313;
+  margin: 0;
 }
 
 .wrapper {
@@ -215,7 +216,7 @@ section {
   line-height: 72px;
   text-align: center;
   margin-bottom: 4px;
-  background: linear-gradient(90deg, #FF5313, #FF8C00, #FF5313);
+  background: linear-gradient(90deg, #ff5313, #ff8c00, #ff5313);
   background-size: 200% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -249,7 +250,7 @@ section {
 .about-us__card {
   padding: 24px;
   border-radius: 24px;
-  background: #F5F5F5;
+  background: #f5f5f5;
   position: relative;
   height: 100%;
 }
@@ -265,7 +266,7 @@ section {
   right: 22px;
 }
 .about-us__card.plus {
-  background: #FFF1DA;
+  background: #fff1da;
 }
 .about-us__card.plus .plus-img__one {
   top: 50px;
@@ -287,7 +288,7 @@ section {
   left: 81px;
 }
 .about-us__card.up-money {
-  background: #FFE4DA;
+  background: #ffe4da;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -324,7 +325,7 @@ section {
   padding-top: 120px;
 }
 .financial-status .animation-title {
-  background: linear-gradient(45deg, #f4c270, #FFE4DA, #45b7d1, #F5F5F5);
+  background: linear-gradient(45deg, #f4c270, #ffe4da, #45b7d1, #f5f5f5);
   background-size: 200% 200%;
   animation: shimmer 5s ease-in-out infinite;
   background-size: 300% 300%;
@@ -381,7 +382,7 @@ section {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: #F5F5F5;
+  background: #f5f5f5;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -404,7 +405,7 @@ section {
 .financial-status__item {
   cursor: pointer;
   padding: 12px 33px 12px 19px;
-  background: #F5F5F5;
+  background: #f5f5f5;
   border-radius: 24px;
   display: flex;
   align-items: center;
@@ -458,7 +459,7 @@ section {
   height: 100%;
 }
 .financial-status__step-card {
-  background: #F5F5F5;
+  background: #f5f5f5;
   padding: 32px;
   display: flex;
   flex-direction: column;
@@ -467,16 +468,16 @@ section {
   height: 100%;
 }
 .financial-status__step-card.orange-card {
-  background: #FFE4DA;
+  background: #ffe4da;
 }
 .financial-status__step-card.orange-card .financial-status__step-card__step {
-  color: #FF5313;
+  color: #ff5313;
 }
 .financial-status__step-card.gold-card {
-  background: #FFF1DA;
+  background: #fff1da;
 }
 .financial-status__step-card.gold-card .financial-status__step-card__step {
-  color: #FFAB22;
+  color: #ffab22;
 }
 .financial-status__step-card__header {
   display: flex;
@@ -542,7 +543,7 @@ section {
 .hero5-comparison__card {
   padding: 32px;
   border-radius: 24px;
-  background: #F5F5F5;
+  background: #f5f5f5;
   width: 100%;
   cursor: pointer;
   position: relative;
@@ -550,10 +551,10 @@ section {
   overflow: hidden;
 }
 .hero5-comparison__card.gold-card {
-  background: #FFF1DA;
+  background: #fff1da;
 }
 .hero5-comparison__card.orange-card {
-  background: #FFE4DA;
+  background: #ffe4da;
 }
 .hero5-comparison__card.orange-card .hero5-comparison__card-img {
   position: absolute;
@@ -626,7 +627,7 @@ section {
 .hero5-comparison__soon {
   padding: 48px;
   border-radius: 24px;
-  background: linear-gradient(68.59deg, #FF5313 19.43%, #FF9E00 121.15%);
+  background: linear-gradient(68.59deg, #ff5313 19.43%, #ff9e00 121.15%);
   position: relative;
   z-index: 1;
   overflow: hidden;
@@ -670,10 +671,10 @@ section {
 }
 @keyframes colorChange {
   0% {
-    color: #FF5313;
+    color: #ff5313;
   }
   50% {
-    color: #FF9E00;
+    color: #ff9e00;
   }
   100% {
     color: #131313;
@@ -790,7 +791,7 @@ section {
 .hero5-comparison__soon-btn-2 {
   padding: 16px 32px;
   border-radius: 35px;
-  background: #FFE4DA;
+  background: #ffe4da;
   display: block;
   width: -moz-fit-content;
   width: fit-content;
@@ -801,7 +802,7 @@ section {
   margin: 120px auto 0 auto;
 }
 .hero5-comparison__soon-btn-2:hover {
-  background: #FF5313;
+  background: #ff5313;
   color: #fff;
 }
 
@@ -973,7 +974,7 @@ section {
   display: flex;
   align-items: center;
   gap: 7px;
-  background: #F5F5F5;
+  background: #f5f5f5;
   border-radius: 7px;
   padding: 10px;
   margin-top: 8px;
@@ -1026,7 +1027,7 @@ section {
   border-radius: 24px;
 }
 .business-networking .flip-card__front {
-  background: #F5F5F5;
+  background: #f5f5f5;
   z-index: 1;
   display: flex;
   flex-direction: column;
@@ -1067,7 +1068,7 @@ section {
 }
 .business-networking .flip-card__text-wrapper {
   padding: 24px;
-  background: #F5F5F5;
+  background: #f5f5f5;
   width: 100%;
   border-radius: 24px;
   display: flex;
@@ -1089,10 +1090,10 @@ section {
   flex-direction: column;
 }
 .business-networking .flip-card__back.orange-card {
-  background: #FFE4DA;
+  background: #ffe4da;
 }
 .business-networking .flip-card__back.gold-card {
-  background: #FFF1DA;
+  background: #fff1da;
 }
 .business-networking .flip-card__back .flip-card__plus-btn {
   transform: rotate(45deg);
@@ -1145,7 +1146,7 @@ section {
 
 .footer {
   padding: 144px 0 43px 0;
-  background: url(../images/footer-bg.png) no-repeat center center/cover, #F5F5F5;
+  background: url(../images/footer-bg.png) no-repeat center center/cover, #f5f5f5;
   border-radius: 60px 60px 0 0;
   background-size: calc(100% - 60px) 100%;
   overflow: hidden;
@@ -1197,4 +1198,95 @@ section {
   width: 60px;
   height: 60px;
   transition: transform 3s linear, opacity 3s ease-out;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    max-width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .header-right__btn.orange-btn {
+    display: none;
+  }
+  .header {
+    padding: 0 20px;
+  }
+  .intro {
+    padding: 171px 0 277px 0;
+  }
+  .intro-content__title {
+    font-size: 40px;
+    line-height: 46px;
+  }
+  .about-us__title {
+    font-size: 48px;
+    line-height: 56px;
+  }
+  .title {
+    font-size: 40px;
+    line-height: 46px;
+  }
+  .about-us-cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .about-us-cards > .about-us-card__duble:first-child {
+    max-width: 302px;
+    height: unset;
+  }
+  .about-us-card__duble:last-child {
+    flex-direction: row;
+    flex-grow: 1;
+  }
+  .about-us-card__duble:last-child .about-us__card {
+    height: 220px;
+  }
+  .about-us-card__duble:last-child .about-us__card:last-child {
+    width: 100%;
+  }
+  .about-us-card__duble:last-child .about-us__card:first-child {
+    max-width: 243px;
+    width: 100%;
+  }
+  .about-us__card.comment .about-us-card__img {
+    bottom: -4px;
+    width: 166px;
+    height: 177px;
+    right: 22px;
+  }
+  .about-us__card.plus .plus-img__three {
+    width: 65px;
+    height: 65px;
+    bottom: 26px;
+    left: 16px;
+  }
+  .about-us__card.up-money {
+    width: calc(100% - 257px);
+  }
+  .about-us__card.plus .plus-img__one {
+    top: 66px;
+  }
+  .about-us__card.plus .plus-img__two {
+    width: 110px;
+    height: 110px;
+    bottom: 0;
+    top: unset;
+    right: 55px;
+  }
+  .about-us__card.partnership .about-us-card__img {
+    z-index: -1;
+  }
+  .financial-status {
+    padding-top: 0;
+  }
+  .financial-status__content {
+    flex-direction: column;
+    align-items: start;
+  }
+  .financial-status .swiper-btns {
+    display: none;
+  }
 }/*# sourceMappingURL=main.css.map */

@@ -75,6 +75,7 @@ body {
   font-size: 16px;
   line-height: 22px;
   color: #131313;
+  margin: 0;
 }
 
 .wrapper {
@@ -154,7 +155,14 @@ section {
 
       &.sale-btn {
         background: #ff6e00;
-        background: linear-gradient(135deg, #ff6e00 0%, #ff6e00 40%, #ffffff 50%, #ff6e00 60%, #ff6e00 100%);
+        background: linear-gradient(
+          135deg,
+          #ff6e00 0%,
+          #ff6e00 40%,
+          #ffffff 50%,
+          #ff6e00 60%,
+          #ff6e00 100%
+        );
         background-size: 300% 100%;
         animation: shimmer 5s linear infinite;
       }
@@ -170,7 +178,12 @@ section {
       }
 
       &.orange-btn {
-        background: linear-gradient(135deg, #ff5313 0%, #ff7a4d 50%, #ff5313 100%);
+        background: linear-gradient(
+          135deg,
+          #ff5313 0%,
+          #ff7a4d 50%,
+          #ff5313 100%
+        );
         background-size: 200% 100%;
         animation: shimmer 2s linear infinite;
 
@@ -241,7 +254,7 @@ section {
     line-height: 72px;
     text-align: center;
     margin-bottom: 4px;
-    background: linear-gradient(90deg, #FF5313, #FF8C00, #FF5313);
+    background: linear-gradient(90deg, #ff5313, #ff8c00, #ff5313);
     background-size: 200% 100%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -283,7 +296,7 @@ section {
   &__card {
     padding: 24px;
     border-radius: 24px;
-    background: #F5F5F5;
+    background: #f5f5f5;
     position: relative;
     height: 100%;
 
@@ -303,7 +316,7 @@ section {
     }
 
     &.plus {
-      background: #FFF1DA;
+      background: #fff1da;
 
       .plus-img__one {
         top: 50px;
@@ -329,7 +342,7 @@ section {
     }
 
     &.up-money {
-      background: #FFE4DA;
+      background: #ffe4da;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -366,7 +379,6 @@ section {
   // }
 
   @keyframes floatAnimation {
-
     0%,
     100% {
       transform: translateY(0);
@@ -376,7 +388,6 @@ section {
       transform: translateY(-10px);
     }
   }
-
 }
 
 // about us end
@@ -386,7 +397,7 @@ section {
   padding-top: 120px;
 
   .animation-title {
-    background: linear-gradient(45deg, #f4c270, #FFE4DA, #45b7d1, #F5F5F5);
+    background: linear-gradient(45deg, #f4c270, #ffe4da, #45b7d1, #f5f5f5);
     background-size: 200% 200%;
     animation: shimmer 5s ease-in-out infinite;
     background-size: 300% 300%;
@@ -451,7 +462,7 @@ section {
       width: 48px;
       height: 48px;
       border-radius: 50%;
-      background: #F5F5F5;
+      background: #f5f5f5;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -478,7 +489,7 @@ section {
   &__item {
     cursor: pointer;
     padding: 12px 33px 12px 19px;
-    background: #F5F5F5;
+    background: #f5f5f5;
     border-radius: 24px;
     display: flex;
     align-items: center;
@@ -499,7 +510,7 @@ section {
       font-size: 24px;
       font-weight: 700;
       line-height: 32px;
-      opacity: .8;
+      opacity: 0.8;
     }
 
     &-price {
@@ -513,7 +524,7 @@ section {
   .tab-content {
     display: none;
     max-width: calc(100% - 442px);
-    animation: fadeIn .8s ease-in-out;
+    animation: fadeIn 0.8s ease-in-out;
 
     &.active {
       display: block;
@@ -544,7 +555,7 @@ section {
   }
 
   &__step-card {
-    background: #F5F5F5;
+    background: #f5f5f5;
     padding: 32px;
     display: flex;
     flex-direction: column;
@@ -553,18 +564,18 @@ section {
     height: 100%;
 
     &.orange-card {
-      background: #FFE4DA;
+      background: #ffe4da;
 
       .financial-status__step-card__step {
-        color: #FF5313;
+        color: #ff5313;
       }
     }
 
     &.gold-card {
-      background: #FFF1DA;
+      background: #fff1da;
 
       .financial-status__step-card__step {
-        color: #FFAB22;
+        color: #ffab22;
       }
     }
 
@@ -614,7 +625,7 @@ section {
       font-size: 16px;
       font-weight: 600;
       line-height: 22px;
-      opacity: .8;
+      opacity: 0.8;
     }
   }
 }
@@ -626,7 +637,6 @@ section {
   padding: 156px 0 0 0;
   position: relative;
 
-
   .title {
     text-align: center;
   }
@@ -636,7 +646,6 @@ section {
 
 // hero5-comparison start
 .hero5-comparison {
-
   .title {
     text-align: center;
   }
@@ -652,20 +661,19 @@ section {
   &__card {
     padding: 32px;
     border-radius: 24px;
-    background: #F5F5F5;
+    background: #f5f5f5;
     width: 100%;
     cursor: pointer;
     position: relative;
     z-index: 1;
     overflow: hidden;
 
-
     &.gold-card {
-      background: #FFF1DA;
+      background: #fff1da;
     }
 
     &.orange-card {
-      background: #FFE4DA;
+      background: #ffe4da;
 
       .hero5-comparison__card-img {
         position: absolute;
@@ -708,7 +716,7 @@ section {
       justify-content: center;
 
       img {
-        transition: all .3s ease-in-out;
+        transition: all 0.3s ease-in-out;
       }
 
       &.active {
@@ -730,7 +738,7 @@ section {
       font-weight: 600;
       line-height: 22px;
       opacity: 0;
-      transition: all .3s ease-in-out;
+      transition: all 0.3s ease-in-out;
 
       &.active {
         opacity: 1;
@@ -749,7 +757,7 @@ section {
   &__soon {
     padding: 48px;
     border-radius: 24px;
-    background: linear-gradient(68.59deg, #FF5313 19.43%, #FF9E00 121.15%);
+    background: linear-gradient(68.59deg, #ff5313 19.43%, #ff9e00 121.15%);
     position: relative;
     z-index: 1;
     overflow: hidden;
@@ -775,7 +783,7 @@ section {
       background: #fff;
       border-radius: 32px;
       opacity: 1;
-      transition: all .3s ease-in-out;
+      transition: all 0.3s ease-in-out;
     }
 
     .swiper-pagination-bullet-active {
@@ -797,11 +805,11 @@ section {
 
       @keyframes colorChange {
         0% {
-          color: #FF5313;
+          color: #ff5313;
         }
 
         50% {
-          color: #FF9E00;
+          color: #ff9e00;
         }
 
         100% {
@@ -834,12 +842,12 @@ section {
       display: inline-block;
       font-weight: 600;
       color: #fff;
-      transition: all .3s ease-in-out;
+      transition: all 0.3s ease-in-out;
       position: relative;
       overflow: hidden;
 
       &::before {
-        content: '';
+        content: "";
         position: absolute;
         top: -2px;
         left: -2px;
@@ -869,7 +877,6 @@ section {
         animation: float 3s ease-in-out infinite;
 
         @keyframes float {
-
           0%,
           100% {
             transform: translateY(0);
@@ -949,17 +956,17 @@ section {
   &__soon-btn-2 {
     padding: 16px 32px;
     border-radius: 35px;
-    background: #FFE4DA;
+    background: #ffe4da;
     display: block;
     width: fit-content;
     font-weight: 600;
     color: #131313;
     border: none;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     margin: 120px auto 0 auto;
 
     &:hover {
-      background: #FF5313;
+      background: #ff5313;
       color: #fff;
     }
   }
@@ -981,7 +988,7 @@ section {
     font-weight: 600;
     line-height: 28px;
     text-align: center;
-    opacity: .8;
+    opacity: 0.8;
     display: block;
     margin-bottom: 40px;
   }
@@ -1099,7 +1106,7 @@ section {
 
       &::before,
       &::after {
-        content: '';
+        content: "";
         position: absolute;
         top: 50%;
         left: 50%;
@@ -1167,7 +1174,7 @@ section {
       display: flex;
       align-items: center;
       gap: 7px;
-      background: #F5F5F5;
+      background: #f5f5f5;
       border-radius: 7px;
       padding: 10px;
       margin-top: 8px;
@@ -1229,7 +1236,7 @@ section {
     }
 
     &__front {
-      background: #F5F5F5;
+      background: #f5f5f5;
       z-index: 1;
       display: flex;
       flex-direction: column;
@@ -1273,7 +1280,7 @@ section {
 
     &__text-wrapper {
       padding: 24px;
-      background: #F5F5F5;
+      background: #f5f5f5;
       width: 100%;
       border-radius: 24px;
       display: flex;
@@ -1286,7 +1293,7 @@ section {
       font-size: 16px;
       font-weight: 600;
       line-height: 22px;
-      opacity: .8;
+      opacity: 0.8;
     }
 
     &__back {
@@ -1297,18 +1304,17 @@ section {
       flex-direction: column;
 
       &.orange-card {
-        background: #FFE4DA;
+        background: #ffe4da;
       }
 
       &.gold-card {
-        background: #FFF1DA;
+        background: #fff1da;
       }
 
       .flip-card__plus-btn {
         transform: rotate(45deg);
       }
     }
-
 
     &__back-content {
       height: 100%;
@@ -1369,7 +1375,8 @@ section {
 // footer start
 .footer {
   padding: 144px 0 43px 0;
-  background: url(../images/footer-bg.png) no-repeat center center / cover, #F5F5F5;
+  background: url(../images/footer-bg.png) no-repeat center center / cover,
+    #f5f5f5;
   border-radius: 60px 60px 0 0;
   background-size: calc(100% - 60px) 100%;
   overflow: hidden;
@@ -1389,7 +1396,7 @@ section {
     font-size: 14px;
     font-weight: 600;
     line-height: 22px;
-    opacity: .5;
+    opacity: 0.5;
     color: #131313;
   }
 
@@ -1428,4 +1435,103 @@ section {
   width: 60px;
   height: 60px;
   transition: transform 3s linear, opacity 3s ease-out;
+}
+
+// media queris start
+
+@media screen and (max-width: 1200px) {
+  .container {
+    max-width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .header-right__btn.orange-btn {
+    display: none;
+  }
+  .header {
+    padding: 0 20px;
+  }
+  .intro {
+    padding: 171px 0 277px 0;
+  }
+  .intro-content__title {
+    font-size: 40px;
+    line-height: 46px;
+  }
+  .about-us__title {
+    font-size: 48px;
+    line-height: 56px;
+  }
+  .title {
+    font-size: 40px;
+    line-height: 46px;
+  }
+  .about-us-cards {
+    display: flex;
+    flex-wrap: wrap;
+
+    & > .about-us-card__duble:first-child {
+      max-width: 302px;
+      height: unset;
+    }
+  }
+  .about-us-card__duble:last-child {
+    flex-direction: row;
+    flex-grow: 1;
+    .about-us__card {
+      height: 220px;
+
+      &:last-child {
+        width: 100%;
+      }
+      &:first-child {
+        max-width: 243px;
+        width: 100%;
+      }
+    }
+  }
+  .about-us__card.comment .about-us-card__img {
+    bottom: -4px;
+    width: 166px;
+    height: 177px;
+    right: 22px;
+  }
+  // .about-us-card__title {
+  //   font-size: 20px;
+  //   line-height: 26px;
+  // }
+  .about-us__card.plus .plus-img__three {
+    width: 65px;
+    height: 65px;
+    bottom: 26px;
+    left: 16px;
+  }
+  .about-us__card.up-money {
+    width: calc(100% - 257px);
+  }
+  .about-us__card.plus .plus-img__one {
+    top: 66px;
+  }
+  .about-us__card.plus .plus-img__two {
+    width: 110px;
+    height: 110px;
+    bottom: 0;
+    top: unset;
+    right: 55px;
+  }
+  .about-us__card.partnership .about-us-card__img {
+    z-index: -1;
+  }
+  .financial-status{
+    padding-top: 0;
+  }
+  .financial-status__content {
+    flex-direction: column;
+    align-items: start;
+  }
+  .financial-status .swiper-btns{
+    display: none;
+  }
 }
