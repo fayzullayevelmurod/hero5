@@ -1410,3 +1410,22 @@ section {
 }
 
 // footer end
+
+.falling-element {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 20px;
+  transition: transform 3s linear, opacity 3s ease-out;
+  z-index: 1000;
+}
+
+.falling-image {
+  width: 60px;
+  height: 60px;
+  transition: transform 3s linear, opacity 3s ease-out;
+}

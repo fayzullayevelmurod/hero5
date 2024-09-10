@@ -1,17 +1,92 @@
 window.addEventListener('DOMContentLoaded', () => {
+
+  // physical
+  // physical
+  const Engine = Matter.Engine;
+  const World = Matter.World;
+  const Bodies = Matter.Bodies;
+  const Body = Matter.Body;
+
+  let engine;
+  let words = [];
+  let ground, wallLeft, wallRight;
+  let wordsToDisplay = [
+    "Инвесторы",
+    "Клиенты",
+    "Идеи",
+    "Бизнес",
+    "Инсайты",
+    "Партнерства",
+    "Комьюнити",
+    "Знакомства",
+    "Инсайты",
+    "Инвесторы",
+    "Клиенты",
+    "Партнерства",
+    "Бизнес",
+    "Идеи"
+  ]
+
+  function setup() {
+    createCanvas(windowWidth, windowHeight - 60);
+    engine = Engine.create();
+
+    ground = Bodies.rectangle(width / 2, height - 20, width, 10, {
+      isStatic: true,
+    })
+    wallLeft = Bodies.rectangle(0, height / 2, 10, height, {
+      isStatic: true
+    });
+    wallRight = Bodies.rectangle(width, height / 2, 10, height, {
+      isStatic: true
+    })
+
+    World.add(engine.world, [ground, wallLeft, wallRight]);
+
+    for (let i = 0; i < wordsToDisplay.length; i++) {
+      words.push(new Word(random(width), -200, wordsToDisplay[i]));
+    }
+  }
+
+  function draw() {
+    background("#606060");
+    Engine.update(engine);
+    for (let word of words) {
+      word.show();
+    }
+  }
+
+  class Word {
+    constructor(x, y, word) {
+      this.body = Bodies.rectangle(x, y, word.length * 20, 40);
+      this.word = word;
+      World.add(engine.world, this.body);
+    }
+
+    show() {
+      let pos = this.body.position;
+      let angle = this.body.angle; // Corrected from 'angel' to 'angle'
+
+      push();
+      translate(pos.x, pos.y);
+      rotate(angle);
+      rectMode(CENTER);
+      fill(255); // Corrected from 'FileList' to 'fill'
+      stroke("#0f0f0f"); // Corrected from 'SplitVendorChunkCache' to 'stroke'
+      strokeWeight(3);
+      rect(0, 0, this.word.length * 40 + 80, 100, 60);
+      noStroke();
+    }
+  }
+  // physical
+
   AOS.init();
 
-  // financial-status__slider
-  // const financialStatusSlider = new Swiper('.financial-status__slider', {
-  //   slidesPerView: 2,
-  //   spaceBetween: 12,
-  //   navigation: {
-  //     nextEl: '.swiper-btn__next',
-  //     prevEl: '.swiper-btn__prev',
-  //   },
-  //   speed: 700,
-  // });
 
+  // Window resize handler
+  function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
+  }
   // tabs
   // tabs for financial-status__item
   const financialStatusItems = document.querySelectorAll('.financial-status__item');
@@ -82,29 +157,6 @@ window.addEventListener('DOMContentLoaded', () => {
     speed: 700,
   });
 
-  // const cards = document.querySelectorAll('.animation-img__card');
-
-  // cards.forEach((card) => {
-  //   const image = card.querySelectorAll('.animation-img');
-
-  //   card.addEventListener('mousemove', (e) => {
-  //     const cardRect = card.getBoundingClientRect();
-  //     const cardWidth = cardRect.width;
-  //     const cardHeight = cardRect.height;
-
-  //     const xPos = e.clientX - cardRect.left;
-  //     const yPos = e.clientY - cardRect.top;
-
-  //     const rotateX = ((yPos / cardHeight) - 0.5) * 30;
-  //     const rotateY = ((xPos / cardWidth) - 0.5) * -30;
-
-  //     image.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-  //   });
-
-  //   card.addEventListener('mouseleave', () => {
-  //     image.style.transform = `rotateX(0deg) rotateY(0deg)`;
-  //   });
-  // });
   const cards = document.querySelectorAll('.animation-img__card');
 
   cards.forEach((card) => {
@@ -151,30 +203,4 @@ window.addEventListener('DOMContentLoaded', () => {
   } catch (error) {
 
   }
-
-
-  // const applicationConveniencesSection = document.querySelector('.application-conveniences');
-  // const phoneImg = document.querySelector('.phone__img');
-
-  // let isActive = false; // active klassi qo'shilganligini kuzatish uchun flag
-
-  // window.addEventListener('scroll', function () {
-  //   const sectionTop = applicationConveniencesSection.getBoundingClientRect().top;
-  //   const windowHeight = window.innerHeight;
-
-  //   // Agar section yuqori qismi ekran ichida bo'lsa
-  //   if (sectionTop < windowHeight && sectionTop > 0) {
-  //     if (!isActive) {
-  //       phoneImg.classList.add('active');
-  //       applicationConveniencesSection.classList.add('active');
-  //       isActive = true; // active klassi qo'shilganini belgilash
-  //     }
-  //   } else {
-  //     // Agar section chiqib ketsa
-  //     if (isActive) {
-  //       applicationConveniencesSection.classList.remove('active');
-  //       isActive = false; // active klassi olinganini belgilash
-  //     }
-  //   }
-  // });
 });
