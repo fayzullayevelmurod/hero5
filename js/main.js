@@ -1,5 +1,15 @@
 window.addEventListener('DOMContentLoaded', () => {
 
+  // media header
+  const openMenuBtn = document.querySelector('.open-menu__btn');
+  const headerMenu = document.querySelector('.header nav');
+
+  openMenuBtn.addEventListener('click', () => {
+    document.body.classList.toggle('no-scroll');
+    headerMenu.classList.toggle('show');
+    openMenuBtn.classList.toggle('active')
+  });
+
   // physical
   // physical
   const Engine = Matter.Engine;
@@ -113,6 +123,16 @@ window.addEventListener('DOMContentLoaded', () => {
             prevEl: '.swiper-btn__prev',
           },
           speed: 700,
+          breakpoints: {
+            744: {
+              slidesPerView: 2,
+              spaceBetween: 12,
+            },
+            0: {
+              slidesPerView: 1.3,
+              spaceBetween: 12,
+            }
+          }
         });
       }
     });

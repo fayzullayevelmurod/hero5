@@ -108,6 +108,57 @@ section {
   width: 100%;
   z-index: 999;
 
+  .open-menu__btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 12px;
+    border: 1px solid #e2e2e2;
+    display: flex;
+    gap: 3px;
+    flex-direction: column;
+    cursor: pointer;
+    display: none;
+    .line {
+      background: #131313;
+      width: 16px;
+      height: 2px;
+      border-radius: 10px;
+      transition: all 0.2s ease-in-out;
+      &:last-child {
+        width: 11px;
+      }
+    }
+
+    &.active {
+      .line {
+        width: 18px;
+        &:nth-child(1) {
+          transform: rotate(45deg);
+          position: relative;
+          top: 5px;
+          left: 2px;
+        }
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        &:nth-child(3) {
+          transform: rotate(-45deg);
+          position: relative;
+          top: -5px;
+          left: 2px;
+        }
+      }
+    }
+  }
+
+  .right-box {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
   .container {
     display: flex;
     align-items: center;
@@ -1448,6 +1499,45 @@ section {
   }
 }
 @media screen and (max-width: 992px) {
+  .header {
+    position: relative;
+
+    &-logo {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) !important;
+    }
+    &-right {
+      width: 100%;
+      justify-content: space-between;
+    }
+    .open-menu__btn {
+      display: flex;
+    }
+  }
+  .header nav {
+    position: fixed;
+    top: 58px;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+    &.show {
+      display: block;
+    }
+    ul {
+      flex-direction: column;
+      background: #fff;
+      gap: 8px;
+      height: 100%;
+      width: 400px;
+      margin-left: auto;
+      padding: 20px;
+    }
+  }
   .header-right__btn.orange-btn {
     display: none;
   }
@@ -1730,17 +1820,17 @@ section {
     bottom: 0%;
     right: -12%;
   }
-  .business-networking .title{
+  .business-networking .title {
     padding: 12px 0 20px 0;
   }
-  .business-networking{
+  .business-networking {
     margin-bottom: 80px;
   }
-  .footer-list{
+  .footer-list {
     flex-direction: column;
     gap: 4px;
   }
-  .footer .container{
+  .footer .container {
     flex-direction: column;
     gap: 16px;
     align-items: start;
@@ -1750,5 +1840,365 @@ section {
     background-position: bottom;
     background-size: 106% 39%;
     border-radius: 30px 30px;
+  }
+}
+// 744
+@media screen and (max-width: 744px) {
+  .header-social__media {
+    display: none;
+  }
+  .header-logo {
+    position: unset;
+    transform: none !important;
+  }
+  .header-right {
+    width: fit-content;
+  }
+  .header nav ul {
+    width: 100%;
+  }
+  .intro {
+    padding: 175px 0 217px 0;
+  }
+  .intro-content {
+    & > img {
+      width: 100%;
+      height: 146px;
+    }
+  }
+  .intro-content__title {
+    font-size: 28px;
+    margin-top: 10px;
+    line-height: 36px;
+  }
+  .header .container {
+    padding: 10px 0;
+  }
+  .about-us {
+    padding: 68px 0 80px 0;
+    .about-us-content {
+      margin-left: -10px;
+      margin-right: -10px;
+    }
+    .about-us__title {
+      font-size: 36px;
+      line-height: 50px;
+    }
+  }
+  .title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  .about-us-cards {
+    flex-direction: column;
+
+    .about-us__card {
+      min-height: 120px !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      padding: 20px;
+      height: fit-content !important;
+    }
+  }
+  .about-us-card__duble:last-child {
+    flex-direction: column;
+  }
+  .about-us-card__title {
+    font-size: 16px;
+    line-height: 22px;
+    max-width: 180px;
+  }
+  .about-us__card.comment .about-us-card__img {
+    width: 142.7px;
+    height: 125.8px;
+    right: 0;
+  }
+  .about-us__card.plus .plus-img__one {
+    width: 68.76px;
+    height: 60.74px;
+    top: 7.53px;
+    right: 3.37px;
+  }
+  .about-us__card.plus .plus-img__two {
+    width: 83.2px;
+    height: 83.2px;
+    top: 37px;
+    right: 43px;
+  }
+  .about-us__card.plus .plus-img__three {
+    width: 45.83px;
+    height: 45.83px;
+    top: 72px;
+    left: 135px;
+  }
+  .about-us__card.up-money .about-us-card__img {
+    width: 128px;
+    height: 114.49px;
+    top: 6px;
+    right: 0;
+    position: absolute;
+  }
+  .about-us__card.star .about-us-card__img {
+    width: 136.62px;
+    height: 120.55px;
+    top: -5.59px;
+    right: -17.41px;
+  }
+  .about-us__card.partnership .about-us-card__img {
+    width: 124.91px;
+    height: 110.24px;
+    top: 4px;
+    right: 10.91px;
+  }
+  .financial-status__content {
+    gap: 20px;
+  }
+  .financial-status__text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .financial-status__content {
+    margin-bottom: 20px;
+  }
+  .financial-status__item {
+    padding: 8px 20px;
+  }
+  .financial-status__item-content {
+    gap: 12px;
+  }
+  .financial-status__item-title {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .financial-status__content-right {
+    gap: 20px;
+  }
+  .financial-status__step-card {
+    padding: 20px;
+    min-height: 276px;
+  }
+  .financial-status__step-card__step {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .financial-status__step-card__icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+
+    img {
+      width: 10px;
+    }
+  }
+  .financial-status__step-card__title {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .financial-status__step-card__text {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .application-conveniences {
+    padding-top: 100px;
+  }
+  .about-page .phone__wrap .mobile-phone__img1,
+  .about-page .phone__wrap .mobile-phone__img2,
+  .about-page .phone__wrap .mobile-phone__img3 {
+    // display: block;
+    background-repeat: no-repeat;
+    height: 265px;
+    position: absolute;
+  }
+  .about-page .phone__wrap .mobile-phone__img1 {
+    top: 99px;
+    right: -75px;
+    display: block;
+    width: 79%;
+  }
+  .about-page .phone__wrap .mobile-phone__img2 {
+    display: block;
+    top: 0;
+    left: 0;
+  }
+  .about-page .phone__wrap {
+    margin-top: 50px;
+  }
+  .about-page .mobile-info-block {
+    margin: 0;
+    align-items: start;
+  }
+  .about-page {
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 150px;
+    padding: 0 20px;
+  }
+  .about-page .test__title {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .about-page .test__descr {
+    margin-top: 12px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .about-page .mobile-info-block {
+    max-width: 189px;
+  }
+  .hero5-comparison__card {
+    padding: 20px;
+  }
+  .hero5-comparison__cards {
+    margin: 20px 0 80px 0;
+  }
+  .hero5-comparison__card-title {
+    font-size: 20px;
+    line-height: 28px;
+    padding: 0;
+  }
+  .hero5-comparison__card-info {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .hero5-comparison__card-img-bg {
+    height: 59%;
+    bottom: 33px;
+    left: 53px;
+    top: unset;
+  }
+  .hero5-comparison__card.orange-card .hero5-comparison__card-img {
+    width: 277px;
+    height: 221.49px;
+    top: 56px;
+    left: 53px;
+  }
+  .hero5-comparison__soon {
+    padding: 20px;
+  }
+  .hero5-comparison__soon-title {
+    font-size: 24px;
+    line-height: 30px;
+    margin: 44px 0 20px 0;
+  }
+  .hero5-comparison__soon-text {
+    line-height: 20px;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  .hero5-comparison__soon-img img.hero5-comparison__soon-raketa {
+    display: none;
+  }
+  .hero5-comparison__soon-sharik-orange {
+    right: 0;
+    left: unset;
+  }
+  .hero5-comparison__soon-tanga-3 {
+    filter: none;
+    transform: none;
+    width: 91px;
+    height: 123px;
+    bottom: -30px;
+    right: -26px;
+    top: unset;
+  }
+  .hero5-comparison__soon .swiper-pagination {
+    bottom: unset;
+    top: 33px;
+    right: -27px;
+  }
+  .hero5-comparison__soon-img .hero5-comparison__soon-tanga-blur {
+    display: none;
+  }
+  .hero5-comparison__soon-tanga-2 {
+    width: 69px;
+    height: 57px;
+    top: 240px;
+    left: -49px;
+  }
+  .hero5-comparison__soon-btn-2 {
+    margin: 86px auto 0 auto;
+    padding: 10px 16px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .business-networking__text {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 34px;
+  }
+  .business-networking .title {
+    padding-bottom: 6px;
+  }
+  .business-networking__map {
+    background-size: cover;
+    height: 168px;
+    width: calc(100% + 40px);
+    margin: 0 -20px 80px -20px;
+  }
+  .business-networking__user-img {
+    width: 24px;
+    height: 24px;
+  }
+  .business-networking__user-img::before,
+  .business-networking__user-img::after {
+    border-width: 1px;
+  }
+  .business-networking__user.eight {
+    top: 3%;
+    right: -25%;
+  }
+  .business-networking__user.seven {
+    top: 10%;
+  }
+  .business-networking__user.three {
+    top: -7%;
+    left: 42%;
+  }
+  .business-networking__user.nine {
+    bottom: 0%;
+    right: -33%;
+  }
+  .business-networking .flip-card__info {
+    padding: 12px;
+  }
+
+  .business-networking .flip-card__name,
+  .business-networking .flip-card__back-name {
+    font-size: 14px;
+    line-height: 16.4px;
+  }
+  .business-networking .flip-card__status,
+  .business-networking .flip-card__back-status {
+    font-size: 14px;
+    line-height: 13px;
+  }
+  .business-networking .flip-card__back-img{
+    display: none;
+  }
+  .business-networking .flip-card__back-header{
+    margin-bottom: 20px;
+  }
+  .business-networking .flip-card__text,
+  .business-networking .flip-card__back-text {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .business-networking .flip-card__text-wrapper {
+    gap: 8px;
+    justify-content: space-between;
+    min-height: 128px;
+    padding: 20px 16px;
+  }
+  .business-networking .flip-card__back {
+    padding: 16px;
+  }
+  .business-networking .flip-card__back-content {
+    padding-top: 35px;
+  }
+  .business-networking .flip-card__plus-btn {
+    top: 8px;
+    right: 8px;
+    width: 36px;
+    height: 36px;
   }
 }
