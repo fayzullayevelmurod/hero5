@@ -1987,4 +1987,17 @@ section {
     width: 36px;
     height: 36px;
   }
+  .intro .falling-element {
+    display: none;
+    padding: 10px 13px;
+  }
+  .intro .falling-element:nth-child(1), .intro .falling-element:nth-child(2), .intro .falling-element:nth-child(3), .intro .falling-element:nth-child(4), .intro .falling-element:nth-child(5) {
+    display: block;
+  }
+  .intro .falling-image.black {
+    display: none !important;
+  }
+  .intro .falling-image.orange {
+    display: none !important;
+  }
 }/*# sourceMappingURL=main.css.map */
