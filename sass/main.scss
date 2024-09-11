@@ -969,6 +969,8 @@ section {
         position: absolute;
         background: transparent;
         animation: float 3s ease-in-out infinite;
+        mix-blend-mode: screen;
+
 
         @keyframes float {
           0%,
@@ -988,6 +990,7 @@ section {
         &.hero5-comparison__soon-sharik-orange,
         &.hero5-comparison__soon-sharik {
           animation-duration: 5s;
+          mix-blend-mode: normal;
         }
 
         &.hero5-comparison__soon-tanga,

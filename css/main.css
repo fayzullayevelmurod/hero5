@@ -820,6 +820,7 @@ section {
   position: absolute;
   background: transparent;
   animation: float 3s ease-in-out infinite;
+  mix-blend-mode: screen;
 }
 @keyframes float {
   0%, 100% {
@@ -834,6 +835,7 @@ section {
 }
 .hero5-comparison__soon-img img.hero5-comparison__soon-sharik-orange, .hero5-comparison__soon-img img.hero5-comparison__soon-sharik {
   animation-duration: 5s;
+  mix-blend-mode: normal;
 }
 .hero5-comparison__soon-img img.hero5-comparison__soon-tanga, .hero5-comparison__soon-img img.hero5-comparison__soon-tanga-2, .hero5-comparison__soon-img img.hero5-comparison__soon-tanga-3, .hero5-comparison__soon-img img.hero5-comparison__soon-tanga-blur {
   animation-duration: 6s;
