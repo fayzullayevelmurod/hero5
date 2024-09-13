@@ -125,12 +125,14 @@ section {
     flex-direction: column;
     cursor: pointer;
     display: none;
+
     .line {
       background: #131313;
       width: 16px;
       height: 2px;
       border-radius: 10px;
       transition: all 0.2s ease-in-out;
+
       &:last-child {
         width: 11px;
       }
@@ -139,15 +141,18 @@ section {
     &.active {
       .line {
         width: 18px;
+
         &:nth-child(1) {
           transform: rotate(45deg);
           position: relative;
           top: 5px;
           left: 2px;
         }
+
         &:nth-child(2) {
           opacity: 0;
         }
+
         &:nth-child(3) {
           transform: rotate(-45deg);
           position: relative;
@@ -163,6 +168,7 @@ section {
     align-items: center;
     gap: 16px;
   }
+
   .container {
     display: flex;
     align-items: center;
@@ -210,14 +216,12 @@ section {
 
       &.sale-btn {
         background: #ff6e00;
-        background: linear-gradient(
-          135deg,
-          #ff6e00 0%,
-          #ff6e00 40%,
-          #ffffff 50%,
-          #ff6e00 60%,
-          #ff6e00 100%
-        );
+        background: linear-gradient(135deg,
+            #ff6e00 0%,
+            #ff6e00 40%,
+            #ffffff 50%,
+            #ff6e00 60%,
+            #ff6e00 100%);
         background-size: 300% 100%;
         animation: shimmer 5s linear infinite;
       }
@@ -233,12 +237,10 @@ section {
       }
 
       &.orange-btn {
-        background: linear-gradient(
-          135deg,
-          #ff5313 0%,
-          #ff7a4d 50%,
-          #ff5313 100%
-        );
+        background: linear-gradient(135deg,
+            #ff5313 0%,
+            #ff7a4d 50%,
+            #ff5313 100%);
         background-size: 200% 100%;
         animation: shimmer 2s linear infinite;
 
@@ -290,24 +292,29 @@ section {
       margin-top: 12px;
     }
   }
+
   .falling-image {
     width: 158.46px;
     height: 141.53px;
     display: flex;
     align-items: center;
     justify-content: center;
+
     img {
       width: 100%;
       height: 100%;
     }
   }
+
   &-animation__elments {
     width: 100%;
     height: 100%;
     position: absolute;
     left: 0;
-    top: -100px;
+    // top: -95px;
+    top: -144px;
   }
+
   .falling-element {
     color: #131313;
     padding: 8px 12px;
@@ -317,13 +324,16 @@ section {
     line-height: 28px;
     width: fit-content;
     background: #fff;
+
     &.black {
       background: #131313;
       color: #fff;
     }
+
     &.gold {
       background: #fac877;
     }
+
     &.orange {
       background: #ff5313;
       color: #fff;
@@ -473,6 +483,7 @@ section {
   // }
 
   @keyframes floatAnimation {
+
     0%,
     100% {
       transform: translateY(0);
@@ -800,6 +811,10 @@ section {
       z-index: -1;
     }
 
+    .nishon-img {
+      right: 50px;
+    }
+
     .plus-btn {
       width: 40px;
       height: 40px;
@@ -940,28 +955,28 @@ section {
       position: relative;
       overflow: hidden;
 
-      &::before {
-        content: "";
-        position: absolute;
-        top: -2px;
-        left: -2px;
-        right: -2px;
-        bottom: -2px;
-        background: linear-gradient(45deg, #000000, #333333, #000000);
-        background-size: 200% 200%;
-        z-index: -1;
-        animation: shimmer 1.5s linear infinite;
-      }
+      // &::before {
+      //   content: "";
+      //   position: absolute;
+      //   top: -2px;
+      //   left: -2px;
+      //   right: -2px;
+      //   bottom: -2px;
+      //   background: linear-gradient(45deg, #000000, #333333, #000000);
+      //   background-size: 200% 200%;
+      //   z-index: -1;
+      //   animation: shimmer 1.5s linear infinite;
+      // }
 
-      @keyframes shimmer {
-        0% {
-          background-position: 0% 50%;
-        }
+      // @keyframes shimmer {
+      //   0% {
+      //     background-position: 0% 50%;
+      //   }
 
-        100% {
-          background-position: 200% 50%;
-        }
-      }
+      //   100% {
+      //     background-position: 200% 50%;
+      //   }
+      // }
     }
 
     &-img {
@@ -973,6 +988,7 @@ section {
 
 
         @keyframes float {
+
           0%,
           100% {
             transform: translateY(0);
@@ -1331,6 +1347,7 @@ section {
       height: 100%;
       backface-visibility: hidden;
       border-radius: 24px;
+      overflow: hidden;
     }
 
     &__front {
@@ -1347,8 +1364,9 @@ section {
       z-index: -1;
       border-radius: inherit;
       width: 100%;
-      height: 100%;
+      height: 80%;
       object-fit: cover;
+      top: 0;
     }
 
     &__info {
@@ -1470,6 +1488,40 @@ section {
 
 // business-networking end
 
+// politics page
+.politics {
+  margin: 100px auto;
+  max-width: 90%;
+  color: #131313;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  ol,
+  ul {
+    padding-left: 20px;
+    list-style: decimal;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+}
+
+// politics page
+
 // footer start
 .footer {
   padding: 144px 0 43px 0;
@@ -1544,6 +1596,7 @@ section {
     padding-right: 20px;
   }
 }
+
 @media screen and (max-width: 992px) {
   .header {
     position: relative;
@@ -1554,14 +1607,17 @@ section {
       top: 50%;
       transform: translate(-50%, -50%) !important;
     }
+
     &-right {
       width: 100%;
       justify-content: space-between;
     }
+
     .open-menu__btn {
       display: flex;
     }
   }
+
   .header nav {
     position: fixed;
     top: 58px;
@@ -1571,9 +1627,11 @@ section {
     background: rgba(0, 0, 0, 0.5);
     z-index: 999;
     display: none;
+
     &.show {
       display: block;
     }
+
     ul {
       flex-direction: column;
       background: #fff;
@@ -1584,57 +1642,69 @@ section {
       padding: 20px;
     }
   }
+
   .header-right__btn.orange-btn {
     display: none;
   }
+
   .header {
     padding: 0 20px;
   }
+
   .intro {
     padding: 171px 0 277px 0;
   }
+
   .intro-content__title {
     font-size: 40px;
     line-height: 46px;
   }
+
   .about-us__title {
     font-size: 48px;
     line-height: 56px;
   }
+
   .title {
     font-size: 40px;
     line-height: 46px;
   }
+
   .about-us-cards {
     display: flex;
     flex-wrap: wrap;
 
-    & > .about-us-card__duble:first-child {
+    &>.about-us-card__duble:first-child {
       max-width: 302px;
       height: unset;
     }
   }
+
   .about-us-card__duble:last-child {
     flex-direction: row;
     flex-grow: 1;
+
     .about-us__card {
       height: 220px;
 
       &:last-child {
         width: 100%;
       }
+
       &:first-child {
         max-width: 243px;
         width: 100%;
       }
     }
   }
+
   .about-us__card.comment .about-us-card__img {
     bottom: -4px;
     width: 166px;
     height: 177px;
     right: 22px;
   }
+
   // .about-us-card__title {
   //   font-size: 20px;
   //   line-height: 26px;
@@ -1645,12 +1715,15 @@ section {
     bottom: 26px;
     left: 16px;
   }
+
   .about-us__card.up-money {
     width: calc(100% - 257px);
   }
+
   .about-us__card.plus .plus-img__one {
     top: 66px;
   }
+
   .about-us__card.plus .plus-img__two {
     width: 110px;
     height: 110px;
@@ -1658,50 +1731,64 @@ section {
     top: unset;
     right: 55px;
   }
+
   .about-us__card.partnership .about-us-card__img {
     z-index: -1;
   }
+
   .financial-status {
     padding-top: 0;
   }
+
   .financial-status__content {
     flex-direction: column;
     align-items: start;
   }
+
   .financial-status .swiper-btns {
     display: none;
   }
+
   .financial-status__text {
     max-width: 100%;
   }
+
   .financial-status__content {
     gap: 24px;
   }
+
   .financial-status__content-right {
     flex-direction: column;
   }
+
   .financial-status .tab-content {
     max-width: 100%;
   }
+
   .financial-status__step-card {
     min-height: 448px;
   }
+
   .about-page .phone__img {
     width: 60%;
     top: 17%;
   }
+
   .application-conveniences {
     padding-top: 120px;
   }
+
   .about-page .test__wrap,
   .about-page .betatest2__wrap {
     left: 20px;
     max-width: 297px;
   }
+
   .about-page .test__title {
     font-size: 32px;
     line-height: 38px;
   }
+
   .about-page .betatest__wrap,
   .about-page .betatest3__wrap {
     max-width: 297px;
@@ -1779,39 +1866,47 @@ section {
       opacity: 0;
     }
   }
+
   .hero5-comparison__cards {
     flex-direction: column;
 
-    & > div {
+    &>div {
       max-width: 100%;
     }
   }
+
   .hero5-comparison__card.orange-card .hero5-comparison__card-img {
     bottom: -95px;
     width: 54%;
     right: 23px;
     left: unset;
   }
+
   .hero5-comparison__soon-raketa {
     width: 351.62px;
     height: 351.62px;
     top: 40px;
     right: -85px;
   }
+
   .hero5-comparison__soon-title {
     margin: 29px 0 32px 0;
   }
+
   .hero5-comparison__soon {
     padding: 32px;
   }
+
   .hero5-comparison__soon-slider {
     max-width: 100%;
   }
+
   .hero5-comparison__soon-sharik-orange {
     right: 107px;
     width: 164px;
     height: 174px;
   }
+
   .hero5-comparison__soon-tanga-2 {
     right: 168px;
     bottom: 69px;
@@ -1819,15 +1914,19 @@ section {
     width: 91px;
     height: 76px;
   }
+
   .hero5-comparison__soon-sharik {
     display: none;
   }
+
   .hero5-comparison__soon-text {
     max-width: 413px;
   }
+
   .hero5-comparison__soon-title {
     max-width: 522px;
   }
+
   .hero5-comparison__soon-tanga-3 {
     filter: blur(3px);
     width: 84px;
@@ -1835,9 +1934,11 @@ section {
     top: -3px;
     right: 12px;
   }
+
   .hero5-comparison__soon-tanga {
     display: none;
   }
+
   .hero5-comparison__soon-tanga-blur {
     width: 79.3px;
     height: 59px;
@@ -1845,42 +1946,52 @@ section {
     right: -37px;
     left: unset;
   }
+
   .hero5-comparison__soon .swiper-pagination {
     bottom: 32px;
     right: 0;
     left: unset;
   }
+
   .business-networking__map {
     margin-bottom: 80px;
     height: 283px;
   }
+
   .business-networking__user.eight {
     top: 6%;
     right: -6%;
   }
+
   .business-networking__user.seven {
     top: 12%;
     right: 7%;
   }
+
   .business-networking__user.nine {
     bottom: 0%;
     right: -12%;
   }
+
   .business-networking .title {
     padding: 12px 0 20px 0;
   }
+
   .business-networking {
     margin-bottom: 80px;
   }
+
   .footer-list {
     flex-direction: column;
     gap: 4px;
   }
+
   .footer .container {
     flex-direction: column;
     gap: 16px;
     align-items: start;
   }
+
   .footer {
     padding: 40px 0 130px 0;
     background-position: bottom;
@@ -1888,56 +1999,70 @@ section {
     border-radius: 30px 30px;
   }
 }
+
 .application-conveniences__media-img {
   display: none;
 }
+
 // 744
 @media screen and (max-width: 744px) {
   .header-social__media {
     display: none;
   }
+
   .header-logo {
     position: unset;
     transform: none !important;
   }
+
   .header-right {
     width: fit-content;
   }
+
   .header nav ul {
     width: 100%;
   }
+
   .intro {
     padding: 175px 0 217px 0;
   }
+
   .intro-content {
-    & > img {
+    &>img {
       width: 100%;
       height: 146px;
     }
   }
+
   .intro-content__title {
     font-size: 28px;
     margin-top: 10px;
     line-height: 36px;
   }
+
   .header .container {
     padding: 10px 0;
   }
+
   .about-us {
     padding: 68px 0 80px 0;
+
     .about-us-content {
       margin-left: -10px;
       margin-right: -10px;
     }
+
     .about-us__title {
       font-size: 36px;
       line-height: 50px;
     }
   }
+
   .title {
     font-size: 28px;
     line-height: 36px;
   }
+
   .about-us-cards {
     flex-direction: column;
 
@@ -1949,37 +2074,44 @@ section {
       height: fit-content !important;
     }
   }
+
   .about-us-card__duble:last-child {
     flex-direction: column;
   }
+
   .about-us-card__title {
     font-size: 16px;
     line-height: 22px;
     max-width: 180px;
   }
+
   .about-us__card.comment .about-us-card__img {
     width: 142.7px;
     height: 125.8px;
     right: 0;
   }
+
   .about-us__card.plus .plus-img__one {
     width: 68.76px;
     height: 60.74px;
     top: 7.53px;
     right: 3.37px;
   }
+
   .about-us__card.plus .plus-img__two {
     width: 83.2px;
     height: 83.2px;
     top: 37px;
     right: 43px;
   }
+
   .about-us__card.plus .plus-img__three {
     width: 45.83px;
     height: 45.83px;
     top: 72px;
     left: 135px;
   }
+
   .about-us__card.up-money .about-us-card__img {
     width: 128px;
     height: 114.49px;
@@ -1987,49 +2119,61 @@ section {
     right: 0;
     position: absolute;
   }
+
   .about-us__card.star .about-us-card__img {
     width: 136.62px;
     height: 120.55px;
     top: -5.59px;
     right: -17.41px;
   }
+
   .about-us__card.partnership .about-us-card__img {
     width: 124.91px;
     height: 110.24px;
     top: 4px;
     right: 10.91px;
   }
+
   .financial-status__content {
     gap: 20px;
   }
+
   .financial-status__text {
     font-size: 14px;
     line-height: 20px;
   }
+
   .financial-status__content {
     margin-bottom: 20px;
   }
+
   .financial-status__item {
     padding: 8px 20px;
   }
+
   .financial-status__item-content {
     gap: 12px;
   }
+
   .financial-status__item-title {
     font-size: 16px;
     line-height: 20px;
   }
+
   .financial-status__content-right {
     gap: 20px;
   }
+
   .financial-status__step-card {
     padding: 20px;
     min-height: 276px;
   }
+
   .financial-status__step-card__step {
     font-size: 14px;
     line-height: 22px;
   }
+
   .financial-status__step-card__icon {
     width: 32px;
     height: 32px;
@@ -2039,17 +2183,21 @@ section {
       width: 10px;
     }
   }
+
   .financial-status__step-card__title {
     font-size: 16px;
     line-height: 20px;
   }
+
   .financial-status__step-card__text {
     font-size: 14px;
     line-height: 22px;
   }
+
   .application-conveniences {
     padding-top: 100px;
   }
+
   .about-page .phone__wrap .mobile-phone__img1,
   .about-page .phone__wrap .mobile-phone__img2,
   .about-page .phone__wrap .mobile-phone__img3 {
@@ -2058,36 +2206,45 @@ section {
     height: 265px;
     position: absolute;
   }
+
   .application-conveniences__media-img {
     display: block;
     margin: 50px 0;
+
     img {
       width: 100%;
     }
   }
+
   .about-page .phone__double-img__wrap {
     display: none;
   }
+
   .about-page .phone__wrap .mobile-phone__img1 {
     top: 16%;
     right: -75px;
     width: 290px;
   }
+
   .about-page .phone__wrap .mobile-phone__img2 {
     top: 45%;
     right: -72px;
   }
+
   .about-page .phone__wrap .mobile-phone__img3 {
     top: 80%;
     right: -55px;
   }
+
   .about-page .phone__wrap {
     margin-top: 50px;
   }
+
   .about-page .mobile-info-block {
     margin: 0;
     align-items: start;
   }
+
   .about-page {
     row-gap: 65px;
     padding: 0 20px;
@@ -2097,65 +2254,80 @@ section {
     justify-content: space-between;
     padding-bottom: 50px;
   }
+
   .about-page .test__title {
     font-size: 24px;
     line-height: 30px;
   }
+
   .about-page .test__descr {
     margin-top: 12px;
     font-size: 14px;
     line-height: 20px;
   }
+
   .about-page .mobile-info-block {
     max-width: 60%;
   }
+
   .hero5-comparison__card {
     padding: 20px;
   }
+
   .hero5-comparison__cards {
     margin: 20px 0 80px 0;
   }
+
   .hero5-comparison__card-title {
     font-size: 20px;
     line-height: 28px;
     padding: 0;
   }
+
   .hero5-comparison__card-info {
     font-size: 14px;
     line-height: 20px;
   }
+
   .hero5-comparison__card-img-bg {
     height: 59%;
-    bottom: 33px;
+    bottom: 0;
     left: 53px;
     top: unset;
   }
+
   .hero5-comparison__card.orange-card .hero5-comparison__card-img {
     width: 277px;
     height: 221.49px;
     top: 56px;
     left: 53px;
   }
+
   .hero5-comparison__soon {
     padding: 20px;
   }
+
   .hero5-comparison__soon-title {
     font-size: 24px;
     line-height: 30px;
     margin: 44px 0 20px 0;
   }
+
   .hero5-comparison__soon-text {
     line-height: 20px;
     font-size: 14px;
     margin-bottom: 20px;
   }
+
   .hero5-comparison__soon-img img.hero5-comparison__soon-raketa {
     display: none;
   }
+
   .hero5-comparison__soon-sharik-orange {
     right: 0;
     left: unset;
   }
+
   .hero5-comparison__soon-tanga-3 {
     filter: none;
     transform: none;
@@ -2165,62 +2337,76 @@ section {
     right: -26px;
     top: unset;
   }
+
   .hero5-comparison__soon .swiper-pagination {
     bottom: unset;
     top: 33px;
     right: -27px;
   }
+
   .hero5-comparison__soon-img .hero5-comparison__soon-tanga-blur {
     display: none;
   }
+
   .hero5-comparison__soon-tanga-2 {
     width: 69px;
     height: 57px;
     top: 240px;
     left: -49px;
   }
+
   .hero5-comparison__soon-btn-2 {
     margin: 86px auto 0 auto;
     padding: 10px 16px;
     font-size: 14px;
     line-height: 20px;
   }
+
   .business-networking__text {
     font-size: 14px;
     line-height: 20px;
     margin-bottom: 34px;
   }
+
   .business-networking .title {
     padding-bottom: 6px;
   }
+
   .business-networking__map {
     height: 168px;
     width: calc(100% + 40px);
     margin: 0 -20px 80px -20px;
   }
+
   .business-networking__user-img {
     width: 24px;
     height: 24px;
   }
+
   .business-networking__user-img::before,
   .business-networking__user-img::after {
     border-width: 1px;
   }
+
   .business-networking__user.eight {
     top: -8%;
     right: 0;
   }
+
   .business-networking__user.seven {
     top: 10%;
   }
+
   .business-networking__user.three {
     top: -7%;
     left: 42%;
   }
+
   .business-networking__user.nine {
     bottom: 0%;
     right: 0;
   }
+
   .business-networking .flip-card__info {
     padding: 12px;
   }
@@ -2230,43 +2416,53 @@ section {
     font-size: 14px;
     line-height: 16.4px;
   }
+
   .business-networking .flip-card__status,
   .business-networking .flip-card__back-status {
     font-size: 14px;
     line-height: 13px;
   }
+
   .business-networking .flip-card__back-img {
     display: none;
   }
+
   .business-networking .flip-card__back-header {
     margin-bottom: 20px;
   }
+
   .business-networking .flip-card__text,
   .business-networking .flip-card__back-text {
     font-size: 14px;
     line-height: 16px;
   }
+
   .business-networking .flip-card__text-wrapper {
     gap: 8px;
     justify-content: space-between;
     min-height: 128px;
     padding: 20px 16px;
   }
+
   .business-networking .flip-card__back {
     padding: 16px;
   }
+
   .business-networking .flip-card__back-content {
     padding-top: 35px;
   }
+
   .business-networking .flip-card__plus-btn {
     top: 8px;
     right: 8px;
     width: 36px;
     height: 36px;
   }
+
   .intro .falling-element {
     display: none;
     padding: 10px 13px;
+
     &:nth-child(1),
     &:nth-child(2),
     &:nth-child(3),
@@ -2275,19 +2471,30 @@ section {
       display: block;
     }
   }
+
   .intro .falling-image.black {
     display: none !important;
   }
+
   .intro .falling-image.orange {
     display: none !important;
   }
-  .about-us-cards > .about-us-card__duble:first-child {
+
+  .about-us-cards>.about-us-card__duble:first-child {
     max-width: 100%;
+  }
+
+  .politics {
+    margin: 50px auto;
   }
 }
 
 @media screen and (max-width: 500px) {
   .business-networking__map {
     block-size: cover;
+  }
+
+  .business-networking .flip-card__front-img {
+    height: 100%;
   }
 }

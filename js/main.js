@@ -11,7 +11,6 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
   // physical
-  // physical
   const Engine = Matter.Engine;
   const World = Matter.World;
   const Bodies = Matter.Bodies;
@@ -37,34 +36,6 @@ window.addEventListener('DOMContentLoaded', () => {
     "Идеи"
   ]
 
-  function setup() {
-    createCanvas(windowWidth, windowHeight - 60);
-    engine = Engine.create();
-
-    ground = Bodies.rectangle(width / 2, height - 20, width, 10, {
-      isStatic: true,
-    })
-    wallLeft = Bodies.rectangle(0, height / 2, 10, height, {
-      isStatic: true
-    });
-    wallRight = Bodies.rectangle(width, height / 2, 10, height, {
-      isStatic: true
-    })
-
-    World.add(engine.world, [ground, wallLeft, wallRight]);
-
-    for (let i = 0; i < wordsToDisplay.length; i++) {
-      words.push(new Word(random(width), -200, wordsToDisplay[i]));
-    }
-  }
-
-  function draw() {
-    background("#606060");
-    Engine.update(engine);
-    for (let word of words) {
-      word.show();
-    }
-  }
 
   class Word {
     constructor(x, y, word) {
@@ -75,13 +46,13 @@ window.addEventListener('DOMContentLoaded', () => {
 
     show() {
       let pos = this.body.position;
-      let angle = this.body.angle; // Corrected from 'angel' to 'angle'
+      let angle = this.body.angle;
 
       push();
       translate(pos.x, pos.y);
       rotate(angle);
       rectMode(CENTER);
-      fill(255); // Corrected from 'FileList' to 'fill'
+      fill(255);
       stroke("#0f0f0f"); // Corrected from 'SplitVendorChunkCache' to 'stroke'
       strokeWeight(3);
       rect(0, 0, this.word.length * 40 + 80, 100, 60);

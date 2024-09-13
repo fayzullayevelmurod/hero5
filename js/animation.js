@@ -49,7 +49,7 @@ function createFallingElement(element) {
   const randomRotation = Math.random() * 360 - 180;
   div.style.position = 'absolute'; // Make sure the position is absolute for proper placement
   div.style.left = `${randomX}px`;
-  div.style.bottom = `107%`;
+  div.style.bottom = `100%`;
   div.style.transform = `rotate(${randomRotation}deg)`;
 
   // Append the element to the intro
