@@ -184,14 +184,114 @@ const elements = [
   { type: 'text', content: "Партнерства", className: 'gold' },
   { type: 'text', content: "Бизнес", className: 'orange' },
   { type: 'text', content: "Идеи", className: 'black' },
-  { type: 'image', src: './images/flash.svg', className: 'white' },
-  { type: 'image', src: './images/chat.svg', className: 'orange' },
-  { type: 'image', src: './images/hashtag.svg', className: 'black' },
-  { type: 'image', src: './images/cursor.svg', className: 'white' }
+  { type: 'image', src: './images/flashh.png', className: 'white' },
+  { type: 'image', src: './images/chat.png', className: 'orange' },
+  { type: 'image', src: './images/hashtag.png', className: 'black' },
+  { type: 'image', src: './images/cursor.png', className: 'white' }
 ];
 
 // // Matter.js module aliases
-const { Engine, Render, World, Bodies, Body } = Matter;
+// const { Engine, Render, World, Bodies, Body } = Matter;
+
+// // Create an engine
+// const engine = Engine.create();
+// const world = engine.world;
+// const intro = document.querySelector('.intro');
+
+// // Create a renderer
+// const render = Render.create({
+//   element: intro,
+//   engine: engine,
+//   options: {
+//     width: window.innerWidth,
+//     height: window.innerHeight,
+//     wireframes: false, // Disable wireframes for clean rendering
+//     background: '#f5f5f5'
+//   }
+// });
+
+// Render.run(render);
+// Engine.run(engine);
+
+// // Create ground (invisible)
+// const ground = Bodies.rectangle(window.innerWidth / 2, window.innerHeight, window.innerWidth, 10, {
+//   isStatic: true,
+//   render: { visible: false } // Make it invisible
+// });
+// World.add(world, ground);
+
+// // Function to create falling elements
+// function createFallingElement(element) {
+//   let body;
+//   if (element.type === 'text') {
+//     // Create a div for text
+//     const div = document.createElement('div');
+//     div.className = `falling-element ${element.className}`;
+//     div.textContent = element.content;
+//     intro.appendChild(div);
+
+//     const rect = div.getBoundingClientRect();
+
+//     // Create a Matter.js body for the element
+//     body = Bodies.rectangle(Math.random() * window.innerWidth, -50, rect.width, rect.height, {
+//       render: { fillStyle: window.getComputedStyle(div).backgroundColor }
+//     });
+
+//     // Link the DOM element to the body
+//     div.style.position = 'absolute';
+//     Matter.Events.on(engine, 'beforeUpdate', () => {
+//       div.style.left = `${body.position.x - rect.width / 2}px`;
+//       div.style.top = `${body.position.y - rect.height / 2}px`;
+//       div.style.transform = `rotate(${body.angle}rad)`;
+//     });
+//   } else if (element.type === 'image') {
+//     // Create a div for image
+//     const div = document.createElement('div');
+//     div.className = `falling-image ${element.className}`;
+//     const img = document.createElement('img');
+//     img.src = element.src;
+//     div.appendChild(img);
+//     intro.appendChild(div);
+
+//     const rect = div.getBoundingClientRect();
+
+//     // Create a Matter.js body for the image
+//     body = Bodies.rectangle(Math.random() * window.innerWidth, -50, 60, 60, {
+//       render: { sprite: { texture: element.src, xScale: 1, yScale: 1 } }
+//     });
+
+//     // Link the DOM element to the body
+//     div.style.position = 'absolute';
+//     Matter.Events.on(engine, 'beforeUpdate', () => {
+//       div.style.left = `${body.position.x - 30}px`; // Center the image
+//       div.style.top = `${body.position.y - 30}px`;
+//       div.style.transform = `rotate(${body.angle}rad)`;
+//     });
+//   }
+
+//   // Add the body to the world
+//   World.add(world, body);
+// }
+
+// // Function to start falling animation for all elements
+// function startFallingAnimation() {
+//   elements.forEach((element, index) => {
+//     setTimeout(() => createFallingElement(element), index * 300); // Stagger the falling time
+//   });
+// }
+
+// // Start the animation when the page loads
+// window.onload = startFallingAnimation;
+
+// // Adjust canvas size on window resize
+// window.addEventListener('resize', () => {
+//   Render.lookAt(render, {
+//     min: { x: 0, y: 0 },
+//     max: { x: window.innerWidth, y: window.innerHeight }
+//   });
+//   Body.setPosition(ground, { x: window.innerWidth / 2, y: window.innerHeight });
+// });
+const { Engine, Render, World, Bodies, Body, Runner } = Matter;
 
 // Create an engine
 const engine = Engine.create();
@@ -205,23 +305,35 @@ const render = Render.create({
   options: {
     width: window.innerWidth,
     height: window.innerHeight,
-    wireframes: false, // Disable wireframes for clean rendering
+    wireframes: false,
     background: '#f5f5f5'
   }
 });
 
 Render.run(render);
-Engine.run(engine);
+
+// Create a Matter.js runner
+const runner = Runner.create();
+Runner.run(runner, engine);
 
 // Create ground (invisible)
 const ground = Bodies.rectangle(window.innerWidth / 2, window.innerHeight, window.innerWidth, 10, {
   isStatic: true,
-  render: { visible: false } // Make it invisible
+  render: { visible: false }
 });
 World.add(world, ground);
 
+// Cache images before creating falling elements
+function preloadImage(url) {
+  return new Promise((resolve) => {
+    const img = new Image();
+    img.src = url;
+    img.onload = () => resolve(img);
+  });
+}
+
 // Function to create falling elements
-function createFallingElement(element) {
+async function createFallingElement(element) {
   let body;
   if (element.type === 'text') {
     // Create a div for text
@@ -237,36 +349,42 @@ function createFallingElement(element) {
       render: { fillStyle: window.getComputedStyle(div).backgroundColor }
     });
 
-    // Link the DOM element to the body
+    // Link the DOM element to the body using requestAnimationFrame
     div.style.position = 'absolute';
-    Matter.Events.on(engine, 'beforeUpdate', () => {
+    const updatePosition = () => {
       div.style.left = `${body.position.x - rect.width / 2}px`;
       div.style.top = `${body.position.y - rect.height / 2}px`;
       div.style.transform = `rotate(${body.angle}rad)`;
-    });
+      requestAnimationFrame(updatePosition);
+    };
+    requestAnimationFrame(updatePosition);
+
   } else if (element.type === 'image') {
+    // Preload the image first to avoid lags during animation
+    const img = await preloadImage(element.src);
+
     // Create a div for image
     const div = document.createElement('div');
     div.className = `falling-image ${element.className}`;
-    const img = document.createElement('img');
-    img.src = element.src;
     div.appendChild(img);
     intro.appendChild(div);
 
     const rect = div.getBoundingClientRect();
 
     // Create a Matter.js body for the image
-    body = Bodies.rectangle(Math.random() * window.innerWidth, -50, 60, 60, {
-      render: { sprite: { texture: element.src, xScale: 1, yScale: 1 } }
+    body = Bodies.rectangle(Math.random() * window.innerWidth, -50, rect.width, rect.height, {
+      render: { sprite: { texture: element.src, xScale: rect.width / img.width, yScale: rect.height / img.height } }
     });
 
-    // Link the DOM element to the body
+    // Link the DOM element to the body using requestAnimationFrame
     div.style.position = 'absolute';
-    Matter.Events.on(engine, 'beforeUpdate', () => {
-      div.style.left = `${body.position.x - 30}px`; // Center the image
-      div.style.top = `${body.position.y - 30}px`;
+    const updatePosition = () => {
+      div.style.left = `${body.position.x - rect.width / 2}px`;
+      div.style.top = `${body.position.y - rect.height / 2}px`;
       div.style.transform = `rotate(${body.angle}rad)`;
-    });
+      requestAnimationFrame(updatePosition);
+    };
+    requestAnimationFrame(updatePosition);
   }
 
   // Add the body to the world
@@ -291,6 +409,7 @@ window.addEventListener('resize', () => {
   });
   Body.setPosition(ground, { x: window.innerWidth / 2, y: window.innerHeight });
 });
+
 
 
 
