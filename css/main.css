@@ -2039,8 +2039,11 @@ canvas {
 }
 
 @media screen and (max-width: 480px) {
-  .intro {
-    top: -200px;
-    padding-top: 280px;
+  .header {
+    padding: 0;
+  }
+  .header .container {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }/*# sourceMappingURL=main.css.map */
