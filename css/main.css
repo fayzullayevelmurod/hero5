@@ -2005,19 +2005,6 @@ section {
     width: 36px;
     height: 36px;
   }
-  .intro .falling-element {
-    display: none;
-    padding: 10px 13px;
-  }
-  .intro .falling-element:nth-child(1), .intro .falling-element:nth-child(2), .intro .falling-element:nth-child(3), .intro .falling-element:nth-child(4), .intro .falling-element:nth-child(5) {
-    display: block;
-  }
-  .intro .falling-image.black {
-    display: none !important;
-  }
-  .intro .falling-image.orange {
-    display: none !important;
-  }
   .about-us-cards > .about-us-card__duble:first-child {
     max-width: 100%;
   }
@@ -2031,5 +2018,29 @@ section {
   }
   .business-networking .flip-card__front-img {
     height: 100%;
+  }
+}
+.intro {
+  padding-bottom: 0;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.intro-animation__elments {
+  top: -676px;
+  position: relative;
+  height: 100%;
+  background: teal;
+}
+
+canvas {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@media screen and (max-width: 480px) {
+  .intro {
+    top: -200px;
+    padding-top: 280px;
   }
 }/*# sourceMappingURL=main.css.map */

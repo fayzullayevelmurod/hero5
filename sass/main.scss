@@ -2459,26 +2459,26 @@ section {
     height: 36px;
   }
 
-  .intro .falling-element {
-    display: none;
-    padding: 10px 13px;
+  // .intro .falling-element {
+  //   display: none;
+  //   padding: 10px 13px;
 
-    &:nth-child(1),
-    &:nth-child(2),
-    &:nth-child(3),
-    &:nth-child(4),
-    &:nth-child(5) {
-      display: block;
-    }
-  }
+  //   &:nth-child(1),
+  //   &:nth-child(2),
+  //   &:nth-child(3),
+  //   &:nth-child(4),
+  //   &:nth-child(5) {
+  //     display: block;
+  //   }
+  // }
 
-  .intro .falling-image.black {
-    display: none !important;
-  }
+  // .intro .falling-image.black {
+  //   display: none !important;
+  // }
 
-  .intro .falling-image.orange {
-    display: none !important;
-  }
+  // .intro .falling-image.orange {
+  //   display: none !important;
+  // }
 
   .about-us-cards>.about-us-card__duble:first-child {
     max-width: 100%;
@@ -2496,5 +2496,30 @@ section {
 
   .business-networking .flip-card__front-img {
     height: 100%;
+  }
+}
+
+.intro {
+  padding-bottom: 0;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.intro-animation__elments {
+  top: -676px;
+  position: relative;
+  height: 100%;
+  background: teal;
+}
+
+canvas {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@media screen and (max-width: 480px) {
+  .intro {
+    top: -200px;
+    padding-top: 280px;
   }
 }
