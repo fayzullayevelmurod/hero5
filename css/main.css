@@ -254,8 +254,9 @@ section {
   margin-top: 12px;
 }
 .intro .falling-image {
-  width: 158.46px;
-  height: 141.53px;
+  width: 85px;
+  height: -moz-fit-content;
+  height: fit-content;
   display: flex;
   align-items: center;
   justify-content: center;
