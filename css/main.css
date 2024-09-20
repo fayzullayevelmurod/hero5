@@ -241,6 +241,7 @@ section {
   background: #f5f5f5;
   padding: 182px 0 332px;
   position: relative;
+  border-radius: 0 0 50px 50px;
 }
 .intro-content {
   text-align: center;
@@ -941,7 +942,7 @@ section {
   left: 23%;
 }
 .business-networking__user.six {
-  top: 32%;
+  top: 25%;
   left: 40%;
 }
 .business-networking__user.seven {

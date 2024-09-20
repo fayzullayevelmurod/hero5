@@ -122,69 +122,41 @@ window.addEventListener('DOMContentLoaded', () => {
     },
     speed: 700,
   });
+  const userImages = document.querySelectorAll('.business-networking__user-img-hover');
+  let activeElement = null;
 
-  // business-networking__user
-  // Add click event listener to business-networking__user-img elements
-  // const userImages = document.querySelectorAll('.business-networking__user-img');
-  // let activeElement = null;
-
-  // userImages.forEach(img => {
-  //   // Sichqoncha kartaning ustiga borganida
-  //   img.addEventListener('mouseover', function () {
-  //     const userElement = this.closest('.business-networking__user');
-  //     if (userElement) {
-  //       if (activeElement && activeElement !== userElement) {
-  //         activeElement.classList.remove('active');
-  //       }
-  //       userElement.classList.add('active');
-  //       activeElement = userElement;
-  //     }
-  //   });
-
-  //   // Sichqoncha kartadan chiqqanda
-  //   img.addEventListener('mouseout', function () {
-  //     const userElement = this.closest('.business-networking__user');
-  //     if (userElement) {
-  //       userElement.classList.remove('active');
-  //       activeElement = null;
-  //     }
-  //   });
-  // });
-  const userImages = document.querySelectorAll('.business-networking__user-img');
-let activeElement = null;
-
-// Rasmga sichqoncha borganda faqat event ishga tushadi
-userImages.forEach(img => {
-  img.addEventListener('mouseover', function () {
-    const userElement = this.closest('.business-networking__user');
-    if (userElement) {
-      if (activeElement && activeElement !== userElement) {
-        activeElement.classList.remove('active');
+  // Rasmga sichqoncha borganda faqat event ishga tushadi
+  userImages.forEach(img => {
+    img.addEventListener('mouseover', function () {
+      const userElement = this.closest('.business-networking__user');
+      if (userElement) {
+        if (activeElement && activeElement !== userElement) {
+          activeElement.classList.remove('active');
+        }
+        userElement.classList.add('active');
+        activeElement = userElement;
       }
-      userElement.classList.add('active');
-      activeElement = userElement;
-    }
-  });
-});
-
-// Faqat active bo'lsa eventlar ishga tushadi
-document.querySelectorAll('.business-networking__user').forEach(userElement => {
-  userElement.addEventListener('mouseover', function () {
-    if (this.classList.contains('active')) {
-      // `active` klassi mavjud bo'lsa hodisa ishlaydi
-      console.log('Cursor active bo\'lgan elementda.');
-    }
+    });
   });
 
-  userElement.addEventListener('mouseout', function () {
-    if (this.classList.contains('active')) {
-      // `active` klassi mavjud bo'lsa hodisa ishlaydi va o'chiriladi
-      console.log('Cursor elementdan chiqdi.');
-      this.classList.remove('active');
-      activeElement = null;
-    }
+  // Faqat active bo'lsa eventlar ishga tushadi
+  document.querySelectorAll('.business-networking__user').forEach(userElement => {
+    userElement.addEventListener('mouseover', function () {
+      if (this.classList.contains('active')) {
+        // `active` klassi mavjud bo'lsa hodisa ishlaydi
+        console.log('Cursor active bo\'lgan elementda.');
+      }
+    });
+
+    userElement.addEventListener('mouseout', function () {
+      if (this.classList.contains('active')) {
+        // `active` klassi mavjud bo'lsa hodisa ishlaydi va o'chiriladi
+        console.log('Cursor elementdan chiqdi.');
+        this.classList.remove('active');
+        activeElement = null;
+      }
+    });
   });
-});
 
   // business-networking__swiper
   const businessNetworkingSwiper = new Swiper('.business-networking__swiper', {
