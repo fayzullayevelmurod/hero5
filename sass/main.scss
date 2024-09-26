@@ -285,7 +285,7 @@ section {
   padding: 182px 0 332px;
   position: relative;
   border-radius: 0 0 50px 50px;
-
+  user-select: none;
   &-content {
     text-align: center;
 
@@ -2492,10 +2492,10 @@ section {
   background: teal;
 }
 
-canvas {
-  opacity: 0;
-  visibility: hidden;
-}
+// canvas {
+//   opacity: 0;
+//   visibility: hidden;
+// }
 
 @media screen and (max-width: 480px) {
   .intro {
@@ -2510,5 +2510,103 @@ canvas {
       padding-left: 20px;
       padding-right: 20px;
     }
+  }
+}
+.falling-element,
+.falling-image {
+  transition: transform 0.1s ease;
+  // bottom: 0;
+}
+
+.falling-element {
+  transition: transform 0.2s ease; /* Tezlikni va o'zgarishni boshqaradi */
+}
+
+.falling-element:hover {
+  transform: translateY(-10px); /* 10px yuqoriga siljitish */
+}
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+/* ---- stats.js ---- */
+
+.count-particles {
+  background: #000022;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 80px;
+  color: #13e8e9;
+  font-size: 0.8em;
+  text-align: left;
+  text-indent: 4px;
+  line-height: 14px;
+  padding-bottom: 2px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+.js-count-particles {
+  font-size: 1.1em;
+}
+
+#stats,
+.count-particles {
+  -webkit-user-select: none;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+#stats {
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+}
+
+.count-particles {
+  border-radius: 0 0 3px 3px;
+}
+
+/* ---- particles.js container ---- */
+.intro {
+  position: relative;
+  padding-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  .intro-content {
+    // position: absolute;
+    // z-index: 10;
+    // top: 50%;
+    // left: 50%;
+    // width: 100%;
+    // transform: translate(-50%, -50%);
+  }
+}
+#particles-js {
+  width: 100%;
+  height: 100%;
+  background-color: #ff5313;
+  background-image: url('');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#particles-js > div {
+  display: none !important;
+}
+
+
+@media screen and (max-width: 768px) {
+  .intro {
+    border-radius: 0;
+    height: 70vh;
   }
 }
