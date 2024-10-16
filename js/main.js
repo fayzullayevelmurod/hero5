@@ -1,4 +1,57 @@
 window.addEventListener('DOMContentLoaded', () => {
+  // modal
+  const modal = document.querySelector('.modal');
+  const closeModalBtn = document.querySelector('.close-modal__btn');
+  const openModalBtn = document.querySelector('.open-modal__btn');
+
+  // Modalni ochish
+  openModalBtn.addEventListener('click', () => {
+    modal.classList.add('show');
+    document.body.classList.add('no-scroll');
+  });
+
+  // Modalni yopish
+  closeModalBtn.addEventListener('click', () => {
+    modal.classList.remove('show');
+    document.body.classList.remove('no-scroll');
+  });
+
+  // Modaldan tashqaridagi joyni bosganda yopish
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.classList.remove('show');
+      document.body.classList.remove('no-scroll');
+    }
+  });
+  // Custom select elementini tanlash
+  const customSelect = document.querySelector('.custom-select');
+  const selectedText = customSelect.querySelector('.selected-text');
+  const optionsContainer = customSelect.querySelector('.options');
+  const optionsList = optionsContainer.querySelectorAll('.option');
+
+  // Select ochilib yopilishi uchun click event
+  selectedText.addEventListener('click', () => {
+    optionsContainer.classList.toggle('active');
+    selectedText.classList.toggle('active');
+  });
+  console.log('salom');
+
+  // Variant tanlash uchun har bir elementga event qo'shamiz
+  optionsList.forEach(option => {
+    option.addEventListener('click', () => {
+      selectedText.querySelector('span').innerText = option.innerText;
+      optionsContainer.classList.remove('active');
+      selectedText.classList.remove('active');
+    });
+  });
+
+  // Click eventini tashqarida bosilganda yopish uchun
+  document.addEventListener('click', (e) => {
+    if (!customSelect.contains(e.target)) {
+      optionsContainer.classList.remove('active');
+      selectedText.classList.remove('active');
+    }
+  });
 
   // Media Header uchun
   const openMenuBtn = document.querySelector('.open-menu__btn');
